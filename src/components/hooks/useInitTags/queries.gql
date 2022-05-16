@@ -1,0 +1,7 @@
+query SEARCH_TAGS {
+	searchTags(searchTerm: "") {
+		id
+		tagName
+		tagShortDescription
+	}
+}

@@ -1,0 +1,13 @@
+query GET_USER_ACCOUNT($userAccountId: ID) {
+	getUserAccount(userAccountId: $userAccountId) {
+		id
+		displayName
+		avatarColor
+		lastLogin
+		emailAddress
+		isEmailVerified
+		emailLastVerificationSent
+		passwordLastUpdated
+		createdAt
+	}
+}

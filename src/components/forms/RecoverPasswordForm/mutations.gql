@@ -1,0 +1,3 @@
+mutation FORGOT_PASSWORD($emailAddress: String!,$reCaptchaToken: String!) {
+	forgotUserAccountPassword(emailAddress: $emailAddress,reCaptchaToken: $reCaptchaToken)
+}
