@@ -1,5 +1,3 @@
-export const SUPPORT_EMAIL_ADDRESS = 'support@teigee.com'
-
 export const AVATAR_COLORS = {
 	DARK_BLUE: '#0052cc',
 	LIGHT_BLUE: '#00a2bf',

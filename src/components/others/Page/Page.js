@@ -8,7 +8,7 @@ const Page = ({ pageTitle, pageHead, children }) => {
 	return (
 		<Fragment>
 			<Head>
-				<title>TeiGee - {pageTitle}</title>
+				<title>PortFolio - {pageTitle}</title>
 				{pageHead}
 			</Head>
 			<main>
