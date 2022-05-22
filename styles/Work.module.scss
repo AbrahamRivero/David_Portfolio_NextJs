@@ -48,8 +48,8 @@
 	align-items: center;
 
 	.app__work_item {
-		width: 250px;
-		height: 387px;
+		width: 350px; //corregidos
+		height: 470px; //
 		flex-direction: column;
 
 		margin: 2rem;
@@ -60,6 +60,15 @@
 
 		cursor: pointer;
 		transition: all 0.3s ease;
+
+		h5 {
+			margin-top: 12px;
+			margin-bottom: 8px;
+		}
+
+		p {
+			margin-bottom: 8px;
+		}
 
 		&:hover {
 			box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
@@ -86,7 +95,7 @@
 
 .app__work_img {
 	width: 100%;
-	height: 145px;
+	height: 200px; //corregido
 
 	position: relative;
 
@@ -140,6 +149,7 @@
 .app__work_content {
 	padding: 0.5rem;
 	width: 100%;
+	height: 100%;
 	position: relative;
 	flex-direction: column;
 
@@ -155,7 +165,7 @@
 
 	.work_description {
 		overflow-y: auto;
-		height: 120px;
+		//height: 130px;
 		text-align: center;
 	}
 
