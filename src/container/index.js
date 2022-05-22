@@ -10,6 +10,7 @@ export {
   Footer,
   Header,
   Skills,
+  
   Testimonial,
   Work,
 };

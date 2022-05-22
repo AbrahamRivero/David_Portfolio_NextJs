@@ -4,11 +4,12 @@
 }
 
 .app__aboutBg {
-	background-color: #4c5c96;
+	//background-color: #4c5c96;
+	background-color: #7a83cc;
 }
 
 .app__workBg {
-	background-color: #45558d;
+	background-color: #5e66a8;
 }
 
 .app__skillsBg {
@@ -25,6 +26,11 @@
 
 .app__primarybg {
 	background-color: var(--primary-color);
+}
+
+.image {
+	border-radius: 100%;
+	width: 20%;
 }
 
 .home {
@@ -92,7 +98,9 @@
 	text-transform: capitalize;
 
 	span {
-		background-image: linear-gradient(315deg, #42d392 50%, #647eff);
+		//background-image: linear-gradient(315deg, #e7e9ff, #9200ff );
+		background-image: linear-gradient(315deg, #ef410a 15%, #e7c2b3);
+
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}

@@ -59,55 +59,6 @@ const Skills = () => {
 						</motion.div>
 					))}
 				</motion.div>
-				<div className={`${styles.app__skills_exp}`}>
-					{experiences.map(experience => (
-						<motion.div
-							className={`${styles.app__skills_exp_item}`}
-							key={experience.year}
-						>
-							<div className={`${styles.app__skills_exp_year}`}>
-								<p className="bold-text-experiences">{experience.year}</p>
-							</div>
-							<motion.div className={`${styles.app__skills_exp_works}`}>
-								{experience.works.map(work => (
-									<Fragment key={work._ref}>
-										{workExperiences
-											.filter(
-												workExperience => workExperience._id === work._ref
-											)
-											.map(workExperienceFiltered => (
-												<Fragment key={workExperienceFiltered._id}>
-													<motion.div
-														whileInView={{ opacity: [0, 1] }}
-														transition={{ duration: 0.5 }}
-														className={`${styles.app__skills_exp_work}`}
-														data-tip
-														data-for={work.name}
-														key={work._ref}
-													>
-														<h4 className="bold-text-experiences">
-															{workExperienceFiltered.name}
-														</h4>
-														<p className="p-text-experiences">
-															{workExperienceFiltered.company}
-														</p>
-													</motion.div>
-													<ReactTooltip
-														id={workExperienceFiltered.name}
-														effect="solid"
-														arrowColor="#fff"
-														className={`${styles.skills_tooltip}`}
-													>
-														{workExperienceFiltered.desc}
-													</ReactTooltip>
-												</Fragment>
-											))}
-									</Fragment>
-								))}
-							</motion.div>
-						</motion.div>
-					))}
-				</div>
 			</div>
 		</>
 	)
