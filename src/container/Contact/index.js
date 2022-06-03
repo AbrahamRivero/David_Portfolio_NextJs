@@ -20,6 +20,7 @@ const validationSchema = yup
 	.required()
 
 const withContainer = withHoc(() => {
+	const personalEmail = 'riveromartinezabraham@gmail.com'
 	const [loading, setLoading] = useState(false)
 	const [isFormSubmitted, setIsFormSubmitted] = useState(false)
 	const {
@@ -36,9 +37,13 @@ const withContainer = withHoc(() => {
 		},
 	})
 
-	const handlerSubmit = ({ customerName, customerEmail, description }) => {
+	const handlerSubmit = async ({
+		customerName,
+		customerEmail,
+		description,
+	}) => {
 		setLoading(true)
-		const contact = {
+		/* const contact = {
 			_type: 'contact',
 			name: customerName,
 			email: customerEmail,
@@ -52,7 +57,33 @@ const withContainer = withHoc(() => {
 				setIsFormSubmitted(true)
 			})
 			.catch(err => console.log(err))
+		 */
+		try{
+			const options = {
+				method: 'POST',
+				mode: 'no-cors',
+				headers: {
+					'content-type': 'application/json',
+					'X-RapidAPI-Host': 'rapidprod-sendgrid-v1.p.rapidapi.com',
+					'X-RapidAPI-Key': 'c6cb68d467msh6445c18d85dc033p143943jsn6c91b3057cb1',
+				},
+				body: `{"personalizations":[{"to":[{"email":"${personalEmail}"}],"subject":"Hola, soy ${customerName} y quiero hablar contigo!"}],"from":{"email":"${customerEmail}"},"content":[{"type":"text/plain","value":"${description}"}]}`,
+			}
+			const response = await fetch(
+				'https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send',
+				options
+			)
+			const json = await response.json()
+			console.log(json)
+		}
+		catch(error){
+			console.log(error)
+		}
 		
+			/* .then(response => response.json())
+			.then(response => console.log(response))
+			.catch(err => console.error(err)) */
+
 		reset()
 	}
 
@@ -60,7 +91,7 @@ const withContainer = withHoc(() => {
 		handleSubmit: handleSubmit(handlerSubmit),
 		register,
 		loading,
-        isFormSubmitted,
+		isFormSubmitted,
 		validationErrors: errors,
 	}
 })

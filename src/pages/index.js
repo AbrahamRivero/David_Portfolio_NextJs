@@ -5,7 +5,7 @@ import Header from '../container/Header/Header'
 import Work from '../container/Work/Work'
 import Skills from '../container/Skills/Skills'
 import Footer from '../container/Footer/Footer'
-import VerticalTimeLine from '../components/others/VerticalTimeLine/VerticalTimeLine'
+import Experiences from '../container/Experiences/Experiences'
 
 const Home = () => (
 	<Page pageTitle="David Marí">
@@ -14,7 +14,7 @@ const Home = () => (
 			<About />
 			<Work />
 			<Skills />
-			<VerticalTimeLine />
+			<Experiences />
 			<Footer />
 		</Box>
 	</Page>

@@ -72,13 +72,13 @@ const Work = () => {
 						</div>
 
 						<div className={`${styles.app__work_content} app__flex`}>
-							<h5 className="bold-text">{work.title}</h5>
+							{/* <h5 className="bold-text">{work.title}</h5>
 							<p
 								className={`p-text ${styles.work_description}`}
 								style={{ marginTop: 10 }}
 							>
 								{work.description}
-							</p>
+							</p> */}
 
 							<div className={`${styles.app__work_tag} app__flex`}>
 								<p className="p-text">{work.tags[0]}</p>

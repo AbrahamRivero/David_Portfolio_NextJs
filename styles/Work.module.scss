@@ -16,8 +16,9 @@
 	.app__work_filter_item {
 		padding: 0.5rem 1rem;
 		border-radius: 0.5rem;
-		background-color: #fff;
-		color: #000;
+		//background-color: #ffd5a4;
+		background-color: #2f3345;
+		color: #fff;
 		font-weight: 800;
 
 		cursor: pointer;
@@ -25,7 +26,7 @@
 		margin: 0.5rem;
 
 		&:hover {
-			background-color: silver;
+			background-color: #ad7029;
 			color: #fff;
 		}
 
@@ -36,7 +37,7 @@
 	}
 
 	.item_active {
-		background-color: silver;
+		background-color: #ad7029;
 		color: #fff;
 	}
 }
@@ -49,14 +50,14 @@
 
 	.app__work_item {
 		width: 350px; //corregidos
-		height: 470px; //
+		//height: 470px;
 		flex-direction: column;
 
 		margin: 2rem;
 		padding: 1rem;
 		border-radius: 0.5rem;
-		background-color: #e5e5e5;
-		color: #000;
+		background-color: #2f334540;
+		//color: #fff;
 
 		cursor: pointer;
 		transition: all 0.3s ease;
@@ -95,7 +96,7 @@
 
 .app__work_img {
 	width: 100%;
-	height: 200px; //corregido
+	height: 238px; //corregido
 
 	position: relative;
 
@@ -167,16 +168,18 @@
 		overflow-y: auto;
 		//height: 130px;
 		text-align: center;
+		color: #000 !important;
 	}
 
 	.app__work_tag {
 		position: absolute;
 		padding: 0.5rem 1rem;
 		border-radius: 10px;
-		background-color: #fff;
+		background-color: #362F45;
 		top: -25px;
 
 		p {
+			color: #fff !important;
 			margin: 0;
 		}
 	}

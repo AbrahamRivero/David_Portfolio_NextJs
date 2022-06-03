@@ -10,12 +10,15 @@ import styles from '../../../styles/Header.module.scss'
 const Header = () => {
 	const isEnglishSelected = useSelector(state => state.language.isEnglish)
 	return (
-		<div className={`${styles.app__header} app__flex`}>
+		<Box className={`${styles.app__header} app__flex`}>
+			<Box>
+				<img src="/logo.png" width={200} height={120} />
+			</Box>
 			<h2 className="head-text">
 				Hello, <span>I am David</span> <br />
-				Your <span>personal designer</span> for almost <span>everything</span>
+				The <span>designer</span> you <span>need</span>
 			</h2>
-		</div>
+		</Box>
 	)
 }
 
@@ -36,3 +39,15 @@ const StyledBox = styled(Box)(({ theme }) => ({
 		},
 	},
 }))
+
+/* const LogoWrapper = styled(Box)(({ theme }) => ({
+	cursor: 'pointer',
+	[theme.breakpoints.down('lg')]: {
+		flexGrow: 1,
+	},
+	'&& img': {
+		position: 'relative',
+		top: '5px',
+		left: '-8px',
+	},
+})) */

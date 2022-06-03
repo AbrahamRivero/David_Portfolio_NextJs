@@ -9,7 +9,8 @@
 }
 
 .app__workBg {
-	background-color: #5e66a8;
+	/* background-color: #5e66a8; */
+	background-color: #1e233d;
 }
 
 .app__skillsBg {
@@ -91,6 +92,7 @@
 }
 
 .head-text {
+	margin: 0;
 	font-size: 2.75rem;
 	font-weight: 800;
 	text-align: center;
@@ -240,13 +242,13 @@
 		width: 10px;
 		height: 10px;
 		border-radius: 50%;
-		background-color: #cbcbcb;
+		background-color: #ffe7cb;
 		margin: 0.5rem;
 
 		transition: background-color 0.2s ease-in-out;
 
 		&:hover {
-			background-color: rgb(151, 146, 146);
+			background-color: #ffd5a4;
 		}
 
 		@media screen and (min-width: 2000px) {

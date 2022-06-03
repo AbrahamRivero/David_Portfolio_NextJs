@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 856.08 79.26">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: red;
+            }
+
+            .cls-1,
+            .cls-2 {
+                fill-rule: evenodd;
+            }
+
+            .cls-2 {
+                fill: #00b0f0;
+            }
+        </style>
+    </defs>
+    <title>Recurso 1</title>
+    <g id="Capa_2" data-name="Capa 2">
+        <g id="Capa_1-2" data-name="Capa 1">
+            <polygon class="cls-1" points="0 0 856.08 0 856.08 79.26 0 79.26 0 0 0 0" />
+            <polygon class="cls-2" points="0 0 856.08 79.26 0 79.26 0 0 0 0 0 0" />
+        </g>
+    </g>
+</svg>

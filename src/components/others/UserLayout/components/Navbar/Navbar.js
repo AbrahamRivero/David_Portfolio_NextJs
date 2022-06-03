@@ -13,7 +13,7 @@ import { Button } from '@mui/material'
 
 const AppBar = () => (
 	<Box flexGrow={1}>
-		<StyledAppBar position="sticky">
+		<StyledAppBar position="fixed">
 			<FlexToolbar disableGutters>
 				<Box
 					display="flex"
@@ -31,11 +31,12 @@ const AppBar = () => (
 							</HamburgerMenu>
 						</MediaMobile>
 
-						<Box display="flex" justifyContent="space-between" width="100%">
-							<LogoWrapper>
-								<img src="/logo.png" width={90} height={50} />
-							</LogoWrapper>
-
+						<Box
+							display="flex"
+							justifyContent="flex-end"
+							width="100%"
+							id="BOX2"
+						>
 							<MediaDesktop
 								component="div"
 								alignItems="center"
@@ -44,7 +45,7 @@ const AppBar = () => (
 							>
 								<Box display="flex" justifyContent="space-between" width="100%">
 									<Box display="flex" flexDirection="row">
-										{['home', 'about', 'work', 'skills', 'contact'].map(
+										{['home', 'work', 'skills', 'experiences', 'contact'].map(
 											item => (
 												<li className="app__flex p-text" key={`link-${item}`}>
 													<div />
@@ -77,18 +78,6 @@ const FlexToolbar = styled(Toolbar)(({ theme }) => ({
 	[theme.breakpoints.down('lg')]: {
 		justifyContent: 'center',
 		padding: `${theme.spacing(1)} ${theme.spacing(1)}`,
-	},
-}))
-
-const LogoWrapper = styled(Box)(({ theme }) => ({
-	cursor: 'pointer',
-	[theme.breakpoints.down('lg')]: {
-		flexGrow: 1,
-	},
-	'&& img': {
-		position: 'relative',
-		top: '5px',
-		left: '-8px',
 	},
 }))
 

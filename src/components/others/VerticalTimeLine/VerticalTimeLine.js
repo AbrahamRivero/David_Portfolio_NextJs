@@ -96,11 +96,7 @@ const VerticalTimeLine = () => {
 	)
 }
 
-export default AppWrap(
-	MotionWrap(VerticalTimeLine),
-	'experiences',
-	'app__aboutBg'
-)
+export default VerticalTimeLine
 
 const ExperienceContainer = styled(motion.div)(({ theme }) => ({
 	display: 'flex',
