@@ -58,7 +58,7 @@ const withContainer = withHoc(() => {
 			})
 			.catch(err => console.log(err))
 		 */
-		try{
+		/* try{
 			const options = {
 				method: 'POST',
 				mode: 'no-cors',
@@ -78,11 +78,22 @@ const withContainer = withHoc(() => {
 		}
 		catch(error){
 			console.log(error)
-		}
-		
-			/* .then(response => response.json())
+		} */
+
+		/* .then(response => response.json())
 			.then(response => console.log(response))
 			.catch(err => console.error(err)) */
+		const reqBody = { customerName, customerEmail, description }
+		fetch('/api/feedback', {
+			method: 'POST',
+			body: JSON.stringify(reqBody),
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		})
+			.then(response => response.json())
+			.then(response => console.log(response))
+			.catch(err => console.error(err))
 
 		reset()
 	}

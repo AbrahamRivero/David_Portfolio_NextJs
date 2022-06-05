@@ -1,93 +1,51 @@
-import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-
+import React, { Fragment } from 'react'
 import { AppWrap, MotionWrap } from '../../wrapper'
-import { urlFor, client } from '../../client'
+import WorkCard from '../../components/others/WorkCard/WorkCard'
+import {
+	EDITORIALDESIGN_URL,
+	GRAPHICDESIGN_URL,
+	INFOGRAPHIC_URL,
+	UI_UX_URL,
+} from '../../constants/urls'
+
 import styles from '../../../styles/Work.module.scss'
+import { Box } from '@mui/material'
 
 const Work = () => {
-	const [works, setWorks] = useState([])
-	const [filterWork, setFilterWork] = useState([])
-	const [activeFilter, setActiveFilter] = useState('All')
-	const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 })
-
-	useEffect(() => {
-		const query = '*[_type == "works"]'
-
-		client.fetch(query).then(data => {
-			setWorks(data)
-			setFilterWork(data)
-		})
-	}, [])
-
-	const handleWorkFilter = item => {
-		setActiveFilter(item)
-		setAnimateCard([{ y: 100, opacity: 0 }])
-
-		setTimeout(() => {
-			setAnimateCard([{ y: 0, opacity: 1 }])
-
-			if (item === 'All') {
-				setFilterWork(works)
-			} else {
-				setFilterWork(works.filter(work => work.tags.includes(item)))
-			}
-		}, 500)
-	}
-
 	return (
-		<>
+		<Fragment>
 			<h2 className="head-text">
 				My Creative <span>Portfolio</span> Section
 			</h2>
-
-			<div className={styles.app__work_filter}>
-				{['Editorial Design', 'Infographic', 'Graphic Design', 'All'].map(
-					(item, index) => (
-						<div
-							key={index}
-							onClick={() => handleWorkFilter(item)}
-							className={`${styles.app__work_filter_item} app__flex p-text ${
-								activeFilter === item ? `${styles.item_active}` : ''
-							}`}
-						>
-							{item}
-						</div>
-					)
-				)}
-			</div>
-
-			<motion.div
-				animate={animateCard}
-				transition={{ duration: 0.5, delayChildren: 0.5 }}
-				className={styles.app__work_portfolio}
+			<Box
+				display="flex"
+				flexDirection="row"
+				justifyContent="space-around"
+				flexWrap="wrap"
+				marginTop="30px"
 			>
-				{filterWork.map((work, index) => (
-					<div
-						className={`${styles.app__work_item} app__flex ${styles.app__flex_img}`}
-						key={index}
-					>
-						<div className={`${styles.app__work_img} app__flex`}>
-							<img src={urlFor(work.imgUrl)} alt={work.name} />
-						</div>
-
-						<div className={`${styles.app__work_content} app__flex`}>
-							{/* <h5 className="bold-text">{work.title}</h5>
-							<p
-								className={`p-text ${styles.work_description}`}
-								style={{ marginTop: 10 }}
-							>
-								{work.description}
-							</p> */}
-
-							<div className={`${styles.app__work_tag} app__flex`}>
-								<p className="p-text">{work.tags[0]}</p>
-							</div>
-						</div>
-					</div>
-				))}
-			</motion.div>
-		</>
+				<WorkCard
+					imageUrl="/assets/Post_Valldigna.jpg"
+					title="Diseño Gráfico"
+					url={GRAPHICDESIGN_URL}
+				/>
+				<WorkCard
+					imageUrl="/assets/Maravillas Mundo Antiguo.jpg"
+					title="Infografías"
+					url={INFOGRAPHIC_URL}
+				/>
+				<WorkCard
+					imageUrl="/assets/3D EXTRA 2.jpg"
+					title="Diseño Editorial"
+					url={EDITORIALDESIGN_URL}
+				/>
+				<WorkCard
+					imageUrl="/assets/Post_Valldigna.jpg"
+					title="Bienvenido @Usuario"
+					url={UI_UX_URL}
+				/>
+			</Box>
+		</Fragment>
 	)
 }
 

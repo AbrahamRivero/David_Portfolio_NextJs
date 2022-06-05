@@ -3,10 +3,10 @@ import { AppWrap, MotionWrap } from '../../wrapper'
 import { TELEGRAM_URL, WHATSAPP_URL } from '../../constants/urls'
 import styles from '../../../styles/Footer.module.scss'
 import Contact from '../Contact'
+import Box from '@mui/material/Box'
 import IconButton from '@mui/material/IconButton'
 import TelegramIcon from '@mui/icons-material/Telegram'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
-import Box from '@mui/material/Box'
 
 const Footer = () => {
 	return (
