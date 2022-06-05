@@ -22,7 +22,10 @@ async function handler(req, res) {
 		const json = await response.json()
 		console.log(json)
 	}
-	res.status(200).json({ message: 'This works!' })
+	/* res.status(200).json({ message: 'This works!' }) */
+	res.status(200).json({
+		message: `${req.body.customerEmail} + ${req.body.customerName} + ${req.body.description}`,
+	})
 }
 
 export default handler
