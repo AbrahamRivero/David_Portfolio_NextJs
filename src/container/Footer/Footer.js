@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import { AppWrap, MotionWrap } from '../../wrapper'
 import { TELEGRAM_URL, WHATSAPP_URL } from '../../constants/urls'
+import { theme } from '../../theme'
 import styles from '../../../styles/Footer.module.scss'
 import Contact from '../Contact'
 import Box from '@mui/material/Box'
@@ -30,10 +31,10 @@ const Footer = () => {
 			<Contact />
 			<Box marginTop="20px">
 				<IconButton href={TELEGRAM_URL} target="_blank" rel="noreferrer">
-					<TelegramIcon />
+					<TelegramIcon htmlColor={theme.palette.white} />
 				</IconButton>
 				<IconButton href={WHATSAPP_URL} target="_blank" rel="noreferrer">
-					<WhatsAppIcon />
+					<WhatsAppIcon htmlColor={theme.palette.white} />
 				</IconButton>
 			</Box>
 		</Fragment>

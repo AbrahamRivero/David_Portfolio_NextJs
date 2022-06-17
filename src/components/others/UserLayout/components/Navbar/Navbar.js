@@ -10,6 +10,7 @@ import MenuIcon from '@mui/icons-material/MenuSharp'
 import HamburgerMenu from '../HamburguerMenu'
 import Switch from '../../../LanguageSwitch/Switch'
 import { Button } from '@mui/material'
+import CustomLanguageMenu from '../../../CustomLanguageMenu/CustomLanguageMenu'
 
 const AppBar = () => (
 	<Box flexGrow={1}>
@@ -57,7 +58,8 @@ const AppBar = () => (
 											)
 										)}
 									</Box>
-									<Switch />
+									{/* <Switch /> */}
+									<CustomLanguageMenu />
 								</Box>
 							</MediaDesktop>
 						</Box>

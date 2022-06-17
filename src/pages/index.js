@@ -7,7 +7,7 @@ import Skills from '../container/Skills/Skills'
 import Footer from '../container/Footer/Footer'
 import Experiences from '../container/Experiences/Experiences'
 
-const Home = () => (
+const Home = ({ skills }) => (
 	<Page pageTitle="David Marí">
 		<Box>
 			<Header />

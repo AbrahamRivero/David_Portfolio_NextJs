@@ -7,28 +7,16 @@ import { useSelector } from 'react-redux'
 import { Grid } from '@mui/material'
 
 const Skills = () => {
-	/* const [experiences, setExperiences] = useState([]) */
 	const [skills, setSkills] = useState([])
-	/* const [workExperiences, setWorkExperiences] = useState([]) */
 
 	const isEnglishSelected = useSelector(state => state.language.isEnglish)
 
 	useEffect(() => {
-		const query = '*[_type == "experiences"]'
 		const skillsQuery = '*[_type == "skills"]'
-		const workExperiencesQuery = '*[_type == "workExperience"]'
-
-		/* client.fetch(query).then(data => {
-			setExperiences(data)
-		}) */
 
 		client.fetch(skillsQuery).then(data => {
 			setSkills(data)
 		})
-
-	/* 	client.fetch(workExperiencesQuery).then(data => {
-			setWorkExperiences(data)
-		}) */
 	}, [])
 
 	return (
@@ -42,7 +30,7 @@ const Skills = () => {
 			<div className={`${styles.app__skills_container}`}>
 				<Grid item display="flex" lg={7}>
 					<motion.div className={`${styles.app__skills_list}`}>
-						{skills.map(skill => (
+						{skills?.map(skill => (
 							<motion.div
 								whileInView={{ opacity: [0, 1] }}
 								transition={{ duration: 0.5 }}
