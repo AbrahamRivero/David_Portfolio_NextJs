@@ -17,7 +17,12 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-image: linear-gradient(315deg, #ef410a 15%, #a23d16);
+	//background-image: linear-gradient(315deg, #ef410a 15%, #a23d16);
+	background-image: linear-gradient(
+		121.57deg,
+		#e7e6e6 18.77%,
+		rgba(255, 255, 255, 0.66) 60.15%
+	);
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 	border-radius: 34px;
@@ -44,15 +49,15 @@
 			transparent 3%
 		),
 		conic-gradient(
-			white 0%,
+			#3e4258 0%,
 			silver 10%,
-			white 35%,
+			#3e4258 35%,
 			silver 45%,
-			white 60%,
+			#3e4258 60%,
 			silver 70%,
-			white 80%,
+			#3e4258 80%,
 			silver 95%,
-			white 100%
+			#3e4258 100%
 		);
 }
 
@@ -73,13 +78,13 @@ input:checked + .slider:before {
 /*------ ADDED CSS ---------*/
 .slider:after {
 	content: 'English';
-	color: white;
+	color: black;
 	display: block;
 	position: absolute;
 	transform: translate(-50%, -50%);
 	top: 50%;
 	left: 50%;
-	font-size: 10px;
+	font-size: 12px;
 	font-family: Verdana, sans-serif;
 }
 

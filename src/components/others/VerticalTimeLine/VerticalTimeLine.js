@@ -12,9 +12,11 @@ import styled from '@mui/system/styled'
 import { motion } from 'framer-motion'
 import { theme } from '../../../theme'
 import { urlFor, client } from '../../../client'
+import { TimeLineData } from '../../../constants/data'
+import { useSelector } from 'react-redux'
 
 const VerticalTimeLine = () => {
-	const [experiences, setExperiences] = useState([])
+	/* const [experiences, setExperiences] = useState([])
 	const [workExperiences, setWorkExperiences] = useState([])
 	useEffect(() => {
 		const query = '*[_type == "experiences"]'
@@ -27,12 +29,12 @@ const VerticalTimeLine = () => {
 		client.fetch(workExperiencesQuery).then(data => {
 			setWorkExperiences(data)
 		})
-	}, [])
-
+	}, []) */
+	const isEnglishSelected = useSelector(state => state.language.isEnglish)
 	return (
 		<Fragment>
 			<Timeline position="alternate">
-				{experiences.map(experience => (
+				{TimeLineData.map(experience => (
 					<Fragment key={experience.initialYear}>
 						<TimelineItem>
 							<TimelineOppositeContent
@@ -59,34 +61,37 @@ const VerticalTimeLine = () => {
 								flexDirection="column"
 								sx={{ py: '12px', px: 2 }}
 							>
-								{experience.works.map(work => (
-									<Fragment key={work._ref}>
-										{workExperiences
-											.filter(
-												workExperience => workExperience._id === work._ref
-											)
-											.map(workExperienceFiltered => (
-												<ExperienceContainer
-													whileInView={{ opacity: [0, 1] }}
-													transition={{ duration: 0.5, type: 'spring' }}
-													data-tip
-													data-for={work.name}
-													key={workExperienceFiltered._id}
+								{/* {experience.works.map(work => (
+									
+								))} */}
+								<Fragment key={experience.initialYear}>
+									{experience.workExperiences
+										//.filter(workExperience => workExperience._id === work._ref)
+										.map(workExperienceFiltered => (
+											<ExperienceContainer
+												whileInView={{ opacity: [0, 1] }}
+												transition={{ duration: 0.5, type: 'spring' }}
+												data-tip
+												data-for={experience.id}
+												key={workExperienceFiltered.id}
+											>
+												<Typography
+													variant="h3"
+													component="span"
+													fontWeight={600}
 												>
-													<Typography
-														variant="h4"
-														component="span"
-														fontWeight={800}
-													>
-														{workExperienceFiltered.name}
-													</Typography>
-													<Typography variant="body1" component="span">
-														{workExperienceFiltered.company}
-													</Typography>
-												</ExperienceContainer>
-											))}
-									</Fragment>
-								))}
+													{isEnglishSelected
+														? workExperienceFiltered.ocupation
+														: workExperienceFiltered.ocupacion}
+												</Typography>
+												<Typography variant="body1" component="span">
+													{isEnglishSelected
+														? workExperienceFiltered.companyEsp
+														: workExperienceFiltered.company}
+												</Typography>
+											</ExperienceContainer>
+										))}
+								</Fragment>
 							</TimelineContent>
 						</TimelineItem>
 					</Fragment>

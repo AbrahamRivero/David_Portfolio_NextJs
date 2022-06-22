@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 import { AppWrap, MotionWrap } from '../../wrapper'
-import { TELEGRAM_URL, WHATSAPP_URL } from '../../constants/urls'
+import { LINKEDIN_URL, TELEGRAM_URL, WHATSAPP_URL } from '../../constants/urls'
 import { theme } from '../../theme'
 import styles from '../../../styles/Footer.module.scss'
 import Contact from '../Contact'
@@ -8,11 +8,22 @@ import Box from '@mui/material/Box'
 import IconButton from '@mui/material/IconButton'
 import TelegramIcon from '@mui/icons-material/Telegram'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import { useSelector } from 'react-redux'
 
 const Footer = () => {
+	const isEnglishSelected = useSelector(state => state.language.isEnglish)
 	return (
 		<Fragment>
-			<h2 className="head-text">Take a coffee & chat with me</h2>
+			{isEnglishSelected ? (
+				<h2 className="head-text">
+					<span>Take a coffee & chat with me</span>
+				</h2>
+			) : (
+				<h2 className="head-text">
+					<span>Tomemos un café y hablemos</span>
+				</h2>
+			)}
 
 			{/* 			<div className={`${styles.app__footer_cards}`}>
 				<div className={`${styles.app__footer_card}`}>
@@ -35,6 +46,9 @@ const Footer = () => {
 				</IconButton>
 				<IconButton href={WHATSAPP_URL} target="_blank" rel="noreferrer">
 					<WhatsAppIcon htmlColor={theme.palette.white} />
+				</IconButton>
+				<IconButton href={LINKEDIN_URL} target="_blank" rel="noreferrer">
+					<LinkedInIcon htmlColor={theme.palette.white} />
 				</IconButton>
 			</Box>
 		</Fragment>

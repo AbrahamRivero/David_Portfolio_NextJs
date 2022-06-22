@@ -100,8 +100,12 @@
 	text-transform: capitalize;
 
 	span {
-		//background-image: linear-gradient(315deg, #e7e9ff, #9200ff );
-		background-image: linear-gradient(315deg, #ef410a 15%, #e7c2b3);
+		background-image: linear-gradient(
+			121.57deg,
+			#ffffff 18.77%,
+			rgba(255, 255, 255, 0.66) 60.15%
+		);
+		/* background-image: linear-gradient(315deg, #ef410a 15%, #e7c2b3); */
 
 		background-clip: text;
 		-webkit-text-fill-color: transparent;

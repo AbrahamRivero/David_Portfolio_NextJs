@@ -1,15 +1,14 @@
 import { styled } from '@mui/system'
-import MuiAppBar from '@mui/material/AppBar'
-import { LinkButton } from '../../CommonStyles'
 import { MediaMobile } from '../../../Media'
 import { MediaDesktop } from '../../../Media'
+import MuiAppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
 import Toolbar from '@mui/material/Toolbar'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/MenuSharp'
 import HamburgerMenu from '../HamburguerMenu'
 import Switch from '../../../LanguageSwitch/Switch'
-import { Button } from '@mui/material'
 import CustomLanguageMenu from '../../../CustomLanguageMenu/CustomLanguageMenu'
 
 const AppBar = () => (
@@ -50,7 +49,6 @@ const AppBar = () => (
 											item => (
 												<li className="app__flex p-text" key={`link-${item}`}>
 													<div />
-													{/* <LinkButton color='success' href={`#${item}`}>{item}</LinkButton> */}
 													<StyledLinkButton href={`#${item}`}>
 														{item}
 													</StyledLinkButton>
@@ -58,8 +56,8 @@ const AppBar = () => (
 											)
 										)}
 									</Box>
-									{/* <Switch /> */}
-									<CustomLanguageMenu />
+									<Switch />
+									{/* <CustomLanguageMenu /> */}
 								</Box>
 							</MediaDesktop>
 						</Box>

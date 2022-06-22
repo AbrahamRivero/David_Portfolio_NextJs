@@ -10,6 +10,7 @@ import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
 import LoadingButton from '@mui/lab/LoadingButton'
 import TaskAltIcon from '@mui/icons-material/TaskAlt'
+import { useSelector } from 'react-redux'
 
 const Contact = ({
 	handleSubmit,
@@ -18,6 +19,7 @@ const Contact = ({
 	validationErrors,
 	isFormSubmitted,
 }) => {
+	const isEnglishSelected = useSelector(state => state.language.isEnglish)
 	return (
 		<Fragment>
 			{!isFormSubmitted ? (
@@ -27,7 +29,7 @@ const Contact = ({
 						margin="normal"
 						fullWidth
 						variant="filled"
-						label="Your Name"
+						label={isEnglishSelected ? 'Your Name' : 'Nombre'}
 						error={!!validationErrors[CUSTOMER_NAME_FIELD]}
 						helperText={validationErrors[CUSTOMER_NAME_FIELD]?.message}
 						inputProps={{ ...register(CUSTOMER_NAME_FIELD) }}
@@ -37,7 +39,7 @@ const Contact = ({
 						margin="normal"
 						fullWidth
 						variant="filled"
-						label="Email Address"
+						label={isEnglishSelected ? 'Email Address' : 'Email'}
 						error={!!validationErrors[CUSTOMER_EMAIL_FIELD]}
 						helperText={validationErrors[CUSTOMER_EMAIL_FIELD]?.message}
 						inputProps={{ ...register(CUSTOMER_EMAIL_FIELD) }}
@@ -47,7 +49,7 @@ const Contact = ({
 						margin="normal"
 						fullWidth
 						variant="filled"
-						label="Comments"
+						label={isEnglishSelected ? 'Comments' : 'Comentarios'}
 						multiline
 						rows={4}
 						error={!!validationErrors[DESCRIPTION_FIELD]}
@@ -61,7 +63,7 @@ const Contact = ({
 						color="secondary"
 						loading={loading}
 					>
-						Submit
+						{isEnglishSelected ? 'Submit' : 'Enviar'}
 					</SubmitBtn>
 				</StyledBox>
 			) : (

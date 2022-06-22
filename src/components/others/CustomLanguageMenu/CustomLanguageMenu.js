@@ -60,7 +60,7 @@ const CustomLanguageMenu = () => {
 							width: 10,
 							height: 10,
 							bgcolor: 'background.paper',
-							transform: 'translateY(-50%) rotate(45deg)',
+							transform: 'translateY(-10%) rotate(45deg)',
 							zIndex: 0,
 						},
 					},
@@ -70,7 +70,7 @@ const CustomLanguageMenu = () => {
 			>
 				<MenuItem>
 					<ListItemIcon>
-                    <Avatar sx={{ width: 32, height: 32 }}>Es</Avatar>
+                    <Avatar sx={{ width: 32, height: 32 }}>🇪🇸</Avatar>
 					</ListItemIcon>
 					Spanish
 				</MenuItem>

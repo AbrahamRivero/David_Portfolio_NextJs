@@ -1,24 +1,30 @@
-import React, { useState, useEffect } from 'react'
+import { Fragment, useState } from 'react'
 import { motion } from 'framer-motion'
 
+import { useSelector } from 'react-redux'
 import { AppWrap, MotionWrap } from '../../wrapper'
-import { urlFor, client } from '../../client'
+import Typography from '@mui/material/Typography'
 import styles from '../../../styles/Work.module.scss'
+import { works } from '../../constants/data-works'
+import { Tooltip } from '@mui/material'
+import styled from '@mui/system/styled'
 
 const Works = () => {
-	const [works, setWorks] = useState([])
+	const isEnglishSelected = useSelector(state => state.language.isEnglish)
 	const [filterWork, setFilterWork] = useState([])
-	const [activeFilter, setActiveFilter] = useState('All')
+	const [activeFilter, setActiveFilter] = useState('Editorial Design')
 	const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 })
+	/* const [works, setWorks] = useState([])
 
 	useEffect(() => {
 		const query = '*[_type == "works"]'
 
 		client.fetch(query).then(data => {
 			setWorks(data)
+			console.log(data)
 			setFilterWork(data)
 		})
-	}, [])
+	}, []) */
 
 	const handleWorkFilter = item => {
 		setActiveFilter(item)
@@ -30,31 +36,35 @@ const Works = () => {
 			if (item === 'All') {
 				setFilterWork(works)
 			} else {
-				setFilterWork(works.filter(work => work.tags.includes(item)))
+				setFilterWork(works.filter(work => work.tag.includes(item)))
 			}
 		}, 500)
 	}
 
 	return (
-		<>
+		<Fragment>
 			<h2 className="head-text">
 				My Creative <span>Portfolio</span> Section
 			</h2>
 
 			<div className={styles.app__work_filter}>
-				{['Editorial Design', 'Infographic', 'Graphic Design', 'All'].map(
-					(item, index) => (
-						<div
-							key={index}
-							onClick={() => handleWorkFilter(item)}
-							className={`${styles.app__work_filter_item} app__flex p-text ${
-								activeFilter === item ? `${styles.item_active}` : ''
-							}`}
-						>
-							{item}
-						</div>
-					)
-				)}
+				{[
+					'Editorial Design',
+					'Infographic',
+					'Graphic Design',
+					'UI/UX',
+					'All',
+				].map((item, index) => (
+					<div
+						key={index}
+						onClick={() => handleWorkFilter(item)}
+						className={`${styles.app__work_filter_item} app__flex p-text ${
+							activeFilter === item ? `${styles.item_active}` : ''
+						}`}
+					>
+						{item}
+					</div>
+				))}
 			</div>
 
 			<motion.div
@@ -63,16 +73,25 @@ const Works = () => {
 				className={styles.app__work_portfolio}
 			>
 				{filterWork.map((work, index) => (
-					<div
-						className={`${styles.app__work_item} app__flex ${styles.app__flex_img}`}
-						key={index}
+					<StyledTooltip
+						title={
+							<Fragment>
+								<Typography color="inherit">
+									{isEnglishSelected ? work.title : work.titleEsp}
+								</Typography>
+							</Fragment>
+						}
 					>
-						<div className={`${styles.app__work_img} app__flex`}>
-							<img src={urlFor(work.imgUrl)} alt={work.name} />
-						</div>
+						<div
+							className={`${styles.app__work_item} app__flex ${styles.app__flex_img}`}
+							key={index}
+						>
+							<div className={`${styles.app__work_img} app__flex`}>
+								<img src={work.imagesUrls[0]} alt={work.title} />
+							</div>
 
-						<div className={`${styles.app__work_content} app__flex`}>
-							{/* <h5 className="bold-text">{work.title}</h5>
+							<div className={`${styles.app__work_content} app__flex`}>
+								{/* <h5 className="bold-text">{work.title}</h5>
 							<p
 								className={`p-text ${styles.work_description}`}
 								style={{ marginTop: 10 }}
@@ -80,14 +99,15 @@ const Works = () => {
 								{work.description}
 							</p> */}
 
-							<div className={`${styles.app__work_tag} app__flex`}>
-								<p className="p-text">{work.tags[0]}</p>
+								<div className={`${styles.app__work_tag} app__flex`}>
+									<p className="p-text">{work.tag}</p>
+								</div>
 							</div>
 						</div>
-					</div>
+					</StyledTooltip>
 				))}
 			</motion.div>
-		</>
+		</Fragment>
 	)
 }
 
@@ -96,3 +116,11 @@ export default AppWrap(
 	'work',
 	'app__workBg'
 )
+
+const StyledTooltip = styled(({ className, ...props }) => (
+	<Tooltip {...props} classes={{ popper: className }} />
+))(({ theme }) => ({
+	color: 'rgba(0, 0, 0, 0.87)',
+	maxWidth: 220,
+	fontSize: theme.typography.pxToRem(12),
+}))

@@ -12,7 +12,7 @@ import UserLayout from '../components/others/UserLayout'
 import '../../styles/global.scss'
 
 const MyApp = ({ Component, pageProps }) => {
-/* 	useEffect(() => {
+	/* 	useEffect(() => {
 		// Remove the server-side injected CSS.
 		const jssStyles = document.querySelector('#jss-server-side')
 		if (jssStyles) {
@@ -23,7 +23,7 @@ const MyApp = ({ Component, pageProps }) => {
 		<Fragment>
 			<Provider store={store}>
 				<ThemeProvider theme={theme}>
-				<CssBaseline />
+					<CssBaseline />
 					<UserLayout>
 						<Component {...pageProps} />
 					</UserLayout>

@@ -2,21 +2,22 @@ import Page from '../components/others/Page/Page'
 import Box from '@mui/material/Box'
 import About from '../container/About/About'
 import Header from '../container/Header/Header'
-import Work from '../container/Work/Work'
+import Works from '../container/Work/Works'
 import Skills from '../container/Skills/Skills'
 import Footer from '../container/Footer/Footer'
 import Experiences from '../container/Experiences/Experiences'
+import { Fragment } from 'react'
 
-const Home = ({ skills }) => (
-	<Page pageTitle="David Marí">
-		<Box>
+const Home = () => (
+	<Page pageTitle='David Marí'>
+		<Fragment>
 			<Header />
 			<About />
-			<Work />
+			<Works />
 			<Skills />
 			<Experiences />
 			<Footer />
-		</Box>
+		</Fragment>
 	</Page>
 )
 

@@ -1,15 +1,17 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import { motion } from 'framer-motion'
+import { useSelector } from 'react-redux'
 import { AppWrap, MotionWrap } from '../../wrapper'
-import { urlFor, client } from '../../client'
+/* import { urlFor, client } from '../../client' */
 import styled from '@mui/system/styled'
 
 import styles from '../../../styles/About.module.scss'
 import Box from '@mui/material/Box'
 import TiangleSvg from './TiangleSvg'
+import { abouts } from '../../constants/data'
 
 const About = () => {
-	const [abouts, setAbouts] = useState([])
+	/* 	const [abouts, setAbouts] = useState([])
 
 	useEffect(() => {
 		const query = '*[_type == "abouts"]'
@@ -18,15 +20,21 @@ const About = () => {
 			const sortData = data.reverse()
 			setAbouts(sortData)
 		})
-	}, [])
-
+	}, []) */
+	const isEnglishSelected = useSelector(state => state.language.isEnglish)
 	return (
 		<Box bgcolor="#3e4258">
-			{/* className={styles.app__profile_item} */}
-			<h2 className="head-text" style={{ paddingTop: '50px' }}>
-				I Know that <span>Good Design</span> <br />
-				means <span>Good Business</span>
-			</h2>
+			{isEnglishSelected ? (
+				<h2 className="head-text" style={{ paddingTop: '50px' }}>
+					I Know that <span>Good Design</span> <br />
+					means <span>Good Business</span>
+				</h2>
+			) : (
+				<h2 className="head-text" style={{ paddingTop: '50px' }}>
+					Un <span>Buen Diseño</span> <br />
+					significa un <span>Buen Negocio</span>
+				</h2>
+			)}
 			<div className={styles.app__profiles}>
 				{abouts.map((about, index) => (
 					<Fragment key={about.title + index}>
@@ -36,24 +44,26 @@ const About = () => {
 						<StyledWrapper index={index}>
 							{index % 2 === 0 ? (
 								<Fragment>
-									<img
-										src={urlFor(about.imgUrl)}
-										alt={about.title}
-										className="image"
-									/>
+									<img src={about.image} alt={about.title} className="image" />
 									<Box width="500px">
 										<h2
 											className="bold-text"
 											style={{ marginTop: 20, fontSize: '20px', color: '#fff' }}
 										>
-											{about.title}
+											{isEnglishSelected ? about.title : about.titleEsp}
 										</h2>
 										<hr />
 										<p
 											className="p-text"
-											style={{ marginTop: 10, fontSize: '15px', color: '#fff' }}
+											style={{
+												marginTop: 10,
+												fontSize: '15px',
+												color: '#fff',
+											}}
 										>
-											{about.description}
+											{isEnglishSelected
+												? about.description
+												: about.descriptionEsp}
 										</p>
 									</Box>
 								</Fragment>
@@ -69,18 +79,25 @@ const About = () => {
 												textAlign: 'left',
 											}}
 										>
-											{about.title}
+											{isEnglishSelected ? about.title : about.titleEsp}
 										</h2>
 										<hr />
 										<p
 											className="p-text"
-											style={{ marginTop: 10, fontSize: '15px', color: '#fff' }}
+											style={{
+												marginTop: 10,
+												fontSize: '15px',
+												color: '#fff',
+											}}
 										>
-											{about.description}
+											{isEnglishSelected
+												? about.description
+												: about.descriptionEsp}
 										</p>
 									</Box>
 									<img
-										src={urlFor(about.imgUrl)}
+										//src={urlFor(about.imgUrl)}
+										src={about.image}
 										alt={about.title}
 										className="image"
 									/>
@@ -94,7 +111,12 @@ const About = () => {
 							<TiangleSvg type="B" colorA="#3e4258" colorB="#4a4e65" />
 						)}
 						{index === abouts.length - 1 && (
-							<TiangleSvg type="B" colorA="#1e233d" colorB="#4a4e65" />
+							<TiangleSvg
+								type="A"
+								colorA="#1e233d"
+								colorB="#3e4258
+"
+							/>
 						)}
 					</Fragment>
 				))}
@@ -132,7 +154,7 @@ const StyledWrapper = styled(({ ...props }) => <motion.div {...props} />)(
 
 		'& p': {
 			overflowY: 'auto',
-			height: '150px',
+			height: '170px',
 			padding: '5px',
 			textAlign: 'center',
 		},
