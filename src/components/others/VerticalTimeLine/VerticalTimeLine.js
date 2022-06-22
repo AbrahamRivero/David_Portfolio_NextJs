@@ -110,6 +110,7 @@ const ExperienceContainer = styled(motion.div)(({ theme }) => ({
 	margin: theme.spacing(1),
 	borderRadius: '13px',
 	//backgroundColor: '#a09b9b33',
-	backgroundColor: '#171430',
+	//backgroundColor: '#171430',
+	backgroundColor: '#372E47',
 	color: theme.palette.white,
 }))
