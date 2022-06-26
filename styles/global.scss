@@ -271,3 +271,43 @@
 		padding: 2rem;
 	}
 }
+
+.btn-98 {
+	--color: #ad7029;
+	font-family: inherit;
+	display: inline-block;
+	margin: 5px;
+	position: relative;
+	overflow: hidden;
+	transition: color 0.5s;
+	z-index: 1;
+	font-size: 17px;
+	border-radius: 6px;
+	font-weight: 500;
+	color: var(--color);
+}
+.btn-98:before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	background: var(--color);
+	height: 150px;
+	width: 200px;
+	border-radius: 50%;
+}
+.btn-98:hover {
+	color: #fff;
+}
+.btn-98:before {
+	top: 100%;
+	left: 100%;
+	transition: all 0.7s;
+}
+.btn-98:hover:before {
+	top: -30px;
+	left: -30px;
+}
+.btn-98:active::before {
+	background: #af712a;
+	transition: background 0s;
+}

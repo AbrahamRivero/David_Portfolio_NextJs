@@ -5,7 +5,7 @@ class CustomDocument extends Document {
 		return (
 			<Html>
 				<Head>
-					<link rel='icon' href='/favicon.png' />
+					<link rel='icon' href='/logo.svg' />
 					<link rel='preconnect' href='https://fonts.googleapis.com'></link>
 					<link
 						rel='preconnect'

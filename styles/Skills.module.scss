@@ -12,10 +12,12 @@
 	flex-direction: column;
 	align-items: center;
 
-	/*   @media screen and (max-width: 900px) {
-    width: 100%;
-    flex-direction: column;
-  } */
+/* 	@media screen and (min-width: 1440px) {
+		.app__skills_grid {
+		width: 50%;
+		height: 50%;
+		}
+	} */
 }
 
 .app__skills_list {
@@ -27,11 +29,11 @@
 
 	/* margin-right: 5rem; */
 
-	@media screen and (max-width: 900px) {
+	/* @media screen and (max-width: 900px) {
 		margin-right: 0;
 		justify-content: center;
 		align-items: center;
-	}
+	} */
 }
 
 .app__skills_item {
@@ -62,9 +64,13 @@
 			height: 150px;
 		}
 
-		@media screen and (max-width: 450px) {
-			width: 70px;
-			height: 70px;
+		@media screen and (max-width: 520px) {
+			width: 230px;
+			height: 230px;
+			img {
+				width: 60%;
+				height: 60%;
+			}
 		}
 	}
 

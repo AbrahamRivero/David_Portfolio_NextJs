@@ -1,7 +1,14 @@
 import { Fragment } from 'react'
 import { AppWrap, MotionWrap } from '../../wrapper'
-import { LINKEDIN_URL, TELEGRAM_URL, WHATSAPP_URL } from '../../constants/urls'
 import { theme } from '../../theme'
+import { FaDiscord } from 'react-icons/fa'
+import { useSelector } from 'react-redux'
+import {
+	DISCORD_URL,
+	LINKEDIN_URL,
+	TELEGRAM_URL,
+	WHATSAPP_URL,
+} from '../../constants/urls'
 import styles from '../../../styles/Footer.module.scss'
 import Contact from '../Contact'
 import Box from '@mui/material/Box'
@@ -9,7 +16,6 @@ import IconButton from '@mui/material/IconButton'
 import TelegramIcon from '@mui/icons-material/Telegram'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import { useSelector } from 'react-redux'
 
 const Footer = () => {
 	const isEnglishSelected = useSelector(state => state.language.isEnglish)
@@ -41,14 +47,37 @@ const Footer = () => {
 			</div> */}
 			<Contact />
 			<Box marginTop="20px">
-				<IconButton href={TELEGRAM_URL} target="_blank" rel="noreferrer">
-					<TelegramIcon htmlColor={theme.palette.white} />
+				<IconButton
+					size="large"
+					href={TELEGRAM_URL}
+					target="_blank"
+					rel="noreferrer"
+				>
+					<TelegramIcon fontSize="large" htmlColor={theme.palette.white} />
 				</IconButton>
-				<IconButton href={WHATSAPP_URL} target="_blank" rel="noreferrer">
-					<WhatsAppIcon htmlColor={theme.palette.white} />
+				<IconButton
+					size="large"
+					href={WHATSAPP_URL}
+					target="_blank"
+					rel="noreferrer"
+				>
+					<WhatsAppIcon fontSize="large" htmlColor={theme.palette.white} />
 				</IconButton>
-				<IconButton href={LINKEDIN_URL} target="_blank" rel="noreferrer">
-					<LinkedInIcon htmlColor={theme.palette.white} />
+				<IconButton
+					size="large"
+					href={DISCORD_URL}
+					target="_blank"
+					rel="noreferrer"
+				>
+					<FaDiscord size="35px" color={theme.palette.white} />
+				</IconButton>
+				<IconButton
+					size="large"
+					href={LINKEDIN_URL}
+					target="_blank"
+					rel="noreferrer"
+				>
+					<LinkedInIcon fontSize="large" htmlColor={theme.palette.white} />
 				</IconButton>
 			</Box>
 		</Fragment>

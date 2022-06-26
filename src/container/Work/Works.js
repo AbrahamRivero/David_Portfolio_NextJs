@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 import { useSelector } from 'react-redux'
@@ -14,17 +14,12 @@ const Works = () => {
 	const [filterWork, setFilterWork] = useState([])
 	const [activeFilter, setActiveFilter] = useState('Editorial Design')
 	const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 })
-	/* const [works, setWorks] = useState([])
+	const [worksFetching, setWorks] = useState([])
 
 	useEffect(() => {
-		const query = '*[_type == "works"]'
-
-		client.fetch(query).then(data => {
-			setWorks(data)
-			console.log(data)
-			setFilterWork(data)
-		})
-	}, []) */
+		setWorks(works)
+		setFilterWork(works.filter(work => work.tag.includes(activeFilter)))
+	}, [])
 
 	const handleWorkFilter = item => {
 		setActiveFilter(item)
@@ -34,9 +29,10 @@ const Works = () => {
 			setAnimateCard([{ y: 0, opacity: 1 }])
 
 			if (item === 'All') {
-				setFilterWork(works)
+				setFilterWork(worksFetching)
 			} else {
-				setFilterWork(works.filter(work => work.tag.includes(item)))
+				setFilterWork(worksFetching.filter(work => work.tag.includes(item)))
+				console.log(filterWork)
 			}
 		}, 500)
 	}
@@ -44,7 +40,7 @@ const Works = () => {
 	return (
 		<Fragment>
 			<h2 className="head-text">
-				My Creative <span>Portfolio</span> Section
+				<span>My Portfolio</span>
 			</h2>
 
 			<div className={styles.app__work_filter}>
@@ -81,6 +77,7 @@ const Works = () => {
 								</Typography>
 							</Fragment>
 						}
+						key={index}
 					>
 						<div
 							className={`${styles.app__work_item} app__flex ${styles.app__flex_img}`}

@@ -23,8 +23,8 @@ const About = () => {
 	}, []) */
 	const isEnglishSelected = useSelector(state => state.language.isEnglish)
 	return (
-		<Box bgcolor="#3e4258">
-			{isEnglishSelected ? (
+		<Box bgcolor="#2e3141">
+			{/* {isEnglishSelected ? (
 				<h2 className="head-text" style={{ paddingTop: '50px' }}>
 					I Know that <span>Good Design</span> <br />
 					means <span>Good Business</span>
@@ -34,12 +34,12 @@ const About = () => {
 					Un <span>Buen Diseño</span> <br />
 					significa un <span>Buen Negocio</span>
 				</h2>
-			)}
+			)} */}
 			<div className={styles.app__profiles}>
 				{abouts.map((about, index) => (
 					<Fragment key={about.title + index}>
 						{index === 0 && (
-							<TiangleSvg type="A" colorA="#4a4e65" colorB="#3e4258" />
+							<TiangleSvg type="A" colorA="#4a4e65" colorB="#2e3141" />
 						)}
 						<StyledWrapper index={index}>
 							{index % 2 === 0 ? (

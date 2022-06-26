@@ -19,7 +19,7 @@ const Header = () => {
 						<img src="/assets/logo.png" width={400} height={240} />
 					)}
 				</Box>
-				{isEnglishSelected ? (
+		{/* 		{isEnglishSelected ? (
 					<h2 className="head-text">
 						Hello, <span>I am David</span> <br />
 						The <span>designer</span> you <span>need</span>
@@ -29,7 +29,7 @@ const Header = () => {
 						Hola, <span>Soy David</span> <br />
 						El <span>diseñador</span> que <span>necesitas</span>
 					</h2>
-				)}
+				)} */}
 			</Box>
 		</Fragment>
 	)

@@ -9,7 +9,7 @@ import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/MenuSharp'
 import HamburgerMenu from '../HamburguerMenu'
 import Switch from '../../../LanguageSwitch/Switch'
-import CustomLanguageMenu from '../../../CustomLanguageMenu/CustomLanguageMenu'
+import HomeIcon from '@mui/icons-material/Home'
 
 const AppBar = () => (
 	<Box flexGrow={1}>
@@ -43,8 +43,13 @@ const AppBar = () => (
 								display="flex"
 								width="65%"
 							>
-								<Box display="flex" justifyContent="space-between" width="100%">
-									<Box display="flex" flexDirection="row">
+								<Box
+									display="flex"
+									justifyContent="space-between"
+									alignItems="center"
+									width="100%"
+								>
+									{/* 		<Box display="flex" flexDirection="row">
 										{['home', 'work', 'skills', 'experiences', 'contact'].map(
 											item => (
 												<li className="app__flex p-text" key={`link-${item}`}>
@@ -55,9 +60,44 @@ const AppBar = () => (
 												</li>
 											)
 										)}
+									</Box> */}
+									<Box display="flex" flexDirection="row">
+										<li className="app__flex p-text btn-98" key={`link-home`}>
+											<div />
+											<StyledLinkButton href={`#home`}>
+												<HomeIcon />
+											</StyledLinkButton>
+										</li>
+										<li className="app__flex p-text btn-98" key={`link-work`}>
+											<div />
+											<StyledLinkButton href={`#work`}>work</StyledLinkButton>
+										</li>
+										<li className="app__flex p-text btn-98" key={`link-skills`}>
+											<div />
+											<StyledLinkButton href={`#skills`}>
+												skills
+											</StyledLinkButton>
+										</li>
+										<li
+											className="app__flex p-text btn-98"
+											key={`link-experiences`}
+										>
+											<div />
+											<StyledLinkButton href={`#experiences`}>
+												experiences
+											</StyledLinkButton>
+										</li>
+										<li
+											className="app__flex p-text btn-98"
+											key={`link-contact`}
+										>
+											<div />
+											<StyledLinkButton href={`#contact`}>
+												contact
+											</StyledLinkButton>
+										</li>
 									</Box>
 									<Switch />
-									{/* <CustomLanguageMenu /> */}
 								</Box>
 							</MediaDesktop>
 						</Box>

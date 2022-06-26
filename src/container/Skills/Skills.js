@@ -4,7 +4,7 @@ import { AppWrap, MotionWrap } from '../../wrapper'
 import { urlFor, client } from '../../client'
 import styles from '../../../styles/Skills.module.scss'
 import { useSelector } from 'react-redux'
-import { Grid } from '@mui/material'
+import { Box, Grid } from '@mui/material'
 import { skills } from '../../constants/data'
 
 const Skills = () => {
@@ -33,7 +33,7 @@ const Skills = () => {
 			)}
 
 			<div className={`${styles.app__skills_container}`}>
-				<Grid item display="flex" lg={7}>
+				<Grid item className={`${styles.app__skills_grid}`}>
 					<motion.div className={`${styles.app__skills_list}`}>
 						{skills.map(skill => (
 							<motion.div
