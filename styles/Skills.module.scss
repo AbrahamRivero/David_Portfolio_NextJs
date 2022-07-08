@@ -5,19 +5,12 @@
 }
 
 .app__skills_container {
-	width: 80%;
+	width: 100%;
 	margin-top: 3rem;
 
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
-/* 	@media screen and (min-width: 1440px) {
-		.app__skills_grid {
-		width: 50%;
-		height: 50%;
-		}
-	} */
 }
 
 .app__skills_list {
@@ -64,7 +57,7 @@
 			height: 150px;
 		}
 
-		@media screen and (max-width: 520px) {
+		@media screen and (max-width: 636px) {
 			width: 230px;
 			height: 230px;
 			img {

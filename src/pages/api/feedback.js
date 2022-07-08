@@ -3,7 +3,7 @@ async function handler(req, res) {
 		const customerName = req.body.customerName
 		const customerEmail = req.body.customerEmail
 		const description = req.body.description
-		const personalEmail = 'riveromartinezabraham@gmail.com'
+		const personalEmail = 'davmar1995@gmail.com'
 
 		const options = {
 			method: 'POST',

@@ -12,6 +12,7 @@
 		"prepare": "husky install"
 	},
 	"dependencies": {
+		"@coreui/react": "^4.2.3",
 		"@emotion/react": "^11.9.3",
 		"@emotion/styled": "^11.9.3",
 		"@hookform/resolvers": "^2.9.3",
@@ -35,6 +36,7 @@
 		"react-redux": "^8.0.2",
 		"react-tooltip": "^4.2.21",
 		"react-typed": "^1.2.0",
+		"reactstrap": "^9.1.1",
 		"redux-actions": "^2.6.5",
 		"redux-devtools-extension": "^2.13.8",
 		"redux-modal": "^4.0.0",

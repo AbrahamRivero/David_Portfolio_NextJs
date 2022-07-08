@@ -11,30 +11,9 @@ import TiangleSvg from './TiangleSvg'
 import { abouts } from '../../constants/data'
 
 const About = () => {
-	/* 	const [abouts, setAbouts] = useState([])
-
-	useEffect(() => {
-		const query = '*[_type == "abouts"]'
-
-		client.fetch(query).then(data => {
-			const sortData = data.reverse()
-			setAbouts(sortData)
-		})
-	}, []) */
 	const isEnglishSelected = useSelector(state => state.language.isEnglish)
 	return (
 		<Box bgcolor="#2e3141">
-			{/* {isEnglishSelected ? (
-				<h2 className="head-text" style={{ paddingTop: '50px' }}>
-					I Know that <span>Good Design</span> <br />
-					means <span>Good Business</span>
-				</h2>
-			) : (
-				<h2 className="head-text" style={{ paddingTop: '50px' }}>
-					Un <span>Buen Diseño</span> <br />
-					significa un <span>Buen Negocio</span>
-				</h2>
-			)} */}
 			<div className={styles.app__profiles}>
 				{abouts.map((about, index) => (
 					<Fragment key={about.title + index}>
@@ -113,7 +92,7 @@ const About = () => {
 						{index === abouts.length - 1 && (
 							<TiangleSvg
 								type="A"
-								colorA="#1e233d"
+								colorA="#2f3347"
 								colorB="#3e4258
 "
 							/>

@@ -41,14 +41,15 @@ export const abouts = [
 	{
 		title: 'UI/UX Designer',
 		titleEsp: 'Diseñador de UI/UX',
-		description: `This is my first serious approach to the world of web design while I was taking the Web Design Postgraduate course at ESAT.
-		This first project consisted of an About Me, a kind of digital cover letter. My idea, from the beginning,
-		was to make a simple design that I could expand in the future with new information,
-		new projects that I have been doing... It is the first draft of the web you are viewing right now.`,
-		descriptionEsp: `Esta es mi primera aproximación seria al mundo del diseño web mientras cursaba el Postgrado de Diseño Web de la ESAT.
-		Este primer proyecto consistía en un About Me, una especie de carta de presentación digital.
-		Mi idea, desde el principio, era hacer un diseño sencillo que pudiese ampliar en el futuro con nueva información,
-		nuevos proyectos que he ido realizando… Es el primer borrador de la web que estás visualizando en este momento.`,
+		description: `Within the world of web design, what caught my attention the most was everything
+		related to UX/UI design because of the sense of creative freedom it gives me. In my opinion,
+		being a good UX/UI designer is the goal I didn't know I would aspire to when I started my studies.
+		I've come a long way to discover this but all the work experiences I've had have helped me to cover various aspects of the design world.`,
+		descriptionEsp: `Dentro del mundo del diseño web, lo que más me llamó la atención fue todo lo relacionado
+		con el diseño UX/UI debido a la sensación de libertad creativa que me proporciona.
+		En mi opinión, ser un buen diseñador UX/UI es la meta a la que no sabía que aspiraría cuando empecé mis estudios.
+		He recorrido un largo camino para descubrir esto, pero todas las experiencias laborales que he tenido me han servido
+		para poder cubrir varios aspectos del mundo del diseño.`,
 		image: '/assets/UX-UI Designer.jpg',
 		id: 3,
 	},

@@ -10,46 +10,52 @@ import MenuIcon from '@mui/icons-material/MenuSharp'
 import HamburgerMenu from '../HamburguerMenu'
 import Switch from '../../../LanguageSwitch/Switch'
 import HomeIcon from '@mui/icons-material/Home'
+import LinkItem from 'next/link'
+import { Link } from '@mui/material'
+import { theme } from '../../../../../theme'
+import { useSelector } from 'react-redux'
 
-const AppBar = () => (
-	<Box flexGrow={1}>
-		<StyledAppBar position="fixed">
-			<FlexToolbar disableGutters>
-				<Box
-					display="flex"
-					alignItems="center"
-					justifyContent="space-between"
-					width={1}
-					id="BOX"
-				>
-					<Box display="flex" alignItems="center" width="100%">
-						<MediaMobile>
-							<HamburgerMenu>
-								<IconButton size="large" edge="start" aria-label="menu">
-									<MenuIcon />
-								</IconButton>
-							</HamburgerMenu>
-						</MediaMobile>
+const AppBar = () => {
+	const isEnglishSelected = useSelector(state => state.language.isEnglish)
+	return (
+		<Box flexGrow={1}>
+			<StyledAppBar position="fixed">
+				<FlexToolbar disableGutters>
+					<Box
+						display="flex"
+						alignItems="center"
+						justifyContent="space-between"
+						width={1}
+						id="BOX"
+					>
+						<Box display="flex" alignItems="center" width="100%">
+							<MediaMobile>
+								<HamburgerMenu>
+									<IconButton size="large" edge="start" aria-label="menu">
+										<MenuIcon />
+									</IconButton>
+								</HamburgerMenu>
+							</MediaMobile>
 
-						<Box
-							display="flex"
-							justifyContent="flex-end"
-							width="100%"
-							id="BOX2"
-						>
-							<MediaDesktop
-								component="div"
-								alignItems="center"
+							<Box
 								display="flex"
-								width="65%"
+								justifyContent="flex-end"
+								width="100%"
+								id="BOX2"
 							>
-								<Box
-									display="flex"
-									justifyContent="space-between"
+								<MediaDesktop
+									component="div"
 									alignItems="center"
-									width="100%"
+									display="flex"
+									width="65%"
 								>
-									{/* 		<Box display="flex" flexDirection="row">
+									<Box
+										display="flex"
+										justifyContent="space-between"
+										alignItems="center"
+										width="100%"
+									>
+										{/* 		<Box display="flex" flexDirection="row">
 										{['home', 'work', 'skills', 'experiences', 'contact'].map(
 											item => (
 												<li className="app__flex p-text" key={`link-${item}`}>
@@ -61,52 +67,64 @@ const AppBar = () => (
 											)
 										)}
 									</Box> */}
-									<Box display="flex" flexDirection="row">
-										<li className="app__flex p-text btn-98" key={`link-home`}>
-											<div />
-											<StyledLinkButton href={`#home`}>
-												<HomeIcon />
-											</StyledLinkButton>
-										</li>
-										<li className="app__flex p-text btn-98" key={`link-work`}>
-											<div />
-											<StyledLinkButton href={`#work`}>work</StyledLinkButton>
-										</li>
-										<li className="app__flex p-text btn-98" key={`link-skills`}>
-											<div />
-											<StyledLinkButton href={`#skills`}>
-												skills
-											</StyledLinkButton>
-										</li>
-										<li
-											className="app__flex p-text btn-98"
-											key={`link-experiences`}
-										>
-											<div />
-											<StyledLinkButton href={`#experiences`}>
-												experiences
-											</StyledLinkButton>
-										</li>
-										<li
-											className="app__flex p-text btn-98"
-											key={`link-contact`}
-										>
-											<div />
-											<StyledLinkButton href={`#contact`}>
-												contact
-											</StyledLinkButton>
-										</li>
+										<Box display="flex" flexDirection="row">
+											<li className="app__flex p-text btn-98" key={`link-home`}>
+												<div />
+												<StyledLink href={`/`}>
+													<StyledLinkButton>
+														<HomeIcon />
+													</StyledLinkButton>
+												</StyledLink>
+											</li>
+											<li className="app__flex p-text btn-98" key={`link-work`}>
+												<div />
+												<StyledLink href={`/works`}>
+													<StyledLinkButton>
+														{isEnglishSelected ? 'works' : 'proyectos'}
+													</StyledLinkButton>
+												</StyledLink>
+											</li>
+										{/* 	<li
+												className="app__flex p-text btn-98"
+												key={`link-skills`}
+											>
+												<div />
+												<StyledLinkButton href={`#skills`}>
+													{isEnglishSelected ? 'skills' : 'habilidades'}
+												</StyledLinkButton>
+											</li> */}
+											<li
+												className="app__flex p-text btn-98"
+												key={`link-experiences`}
+											>
+												<div />
+												<StyledLink href={`/experiences`}>
+													<StyledLinkButton>
+														{isEnglishSelected ? 'experiences' : 'experiencias'}
+													</StyledLinkButton>
+												</StyledLink>
+											</li>
+										{/* 	<li
+												className="app__flex p-text btn-98"
+												key={`link-contact`}
+											>
+												<div />
+												<StyledLinkButton href={`#contact`}>
+													{isEnglishSelected ? 'contact' : 'contacto'}
+												</StyledLinkButton>
+											</li> */}
+										</Box>
+										<Switch />
 									</Box>
-									<Switch />
-								</Box>
-							</MediaDesktop>
+								</MediaDesktop>
+							</Box>
 						</Box>
 					</Box>
-				</Box>
-			</FlexToolbar>
-		</StyledAppBar>
-	</Box>
-)
+				</FlexToolbar>
+			</StyledAppBar>
+		</Box>
+	)
+}
 
 export default AppBar
 
@@ -123,6 +141,10 @@ const FlexToolbar = styled(Toolbar)(({ theme }) => ({
 
 const StyledLinkButton = styled(Button)(({ theme }) => ({
 	color: theme.palette.primary.contrastText,
+}))
+
+const StyledLink = styled(LinkItem)(({ theme }) => ({
+	textDecoration: 'none',
 }))
 
 const StyledAppBar = styled(MuiAppBar)(({ theme }) => ({

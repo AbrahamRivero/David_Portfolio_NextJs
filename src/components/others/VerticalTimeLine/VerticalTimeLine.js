@@ -1,5 +1,9 @@
-import { useState, useEffect, Fragment } from 'react'
-import { AppWrap, MotionWrap } from '../../../wrapper'
+import { Fragment } from 'react'
+import { motion } from 'framer-motion'
+import { theme } from '../../../theme'
+import { useSelector } from 'react-redux'
+import { TimeLineData } from '../../../constants/data'
+import styled from '@mui/system/styled'
 import Timeline from '@mui/lab/Timeline'
 import TimelineItem from '@mui/lab/TimelineItem'
 import TimelineSeparator from '@mui/lab/TimelineSeparator'
@@ -8,28 +12,8 @@ import TimelineContent from '@mui/lab/TimelineContent'
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent'
 import TimelineDot from '@mui/lab/TimelineDot'
 import Typography from '@mui/material/Typography'
-import styled from '@mui/system/styled'
-import { motion } from 'framer-motion'
-import { theme } from '../../../theme'
-import { urlFor, client } from '../../../client'
-import { TimeLineData } from '../../../constants/data'
-import { useSelector } from 'react-redux'
 
 const VerticalTimeLine = () => {
-	/* const [experiences, setExperiences] = useState([])
-	const [workExperiences, setWorkExperiences] = useState([])
-	useEffect(() => {
-		const query = '*[_type == "experiences"]'
-		const workExperiencesQuery = '*[_type == "workExperience"]'
-
-		client.fetch(query).then(data => {
-			const array = data.sort((a, b) => a.initialYear - b.initialYear)
-			setExperiences(array)
-		})
-		client.fetch(workExperiencesQuery).then(data => {
-			setWorkExperiences(data)
-		})
-	}, []) */
 	const isEnglishSelected = useSelector(state => state.language.isEnglish)
 	return (
 		<Fragment>
@@ -84,7 +68,11 @@ const VerticalTimeLine = () => {
 														? workExperienceFiltered.ocupation
 														: workExperienceFiltered.ocupacion}
 												</Typography>
-												<Typography variant="body1" component="span">
+												<Typography
+													variant="body1"
+													component="span"
+													marginTop={1.5}
+												>
 													{isEnglishSelected
 														? workExperienceFiltered.companyEsp
 														: workExperienceFiltered.company}
@@ -109,8 +97,6 @@ const ExperienceContainer = styled(motion.div)(({ theme }) => ({
 	padding: theme.spacing(1),
 	margin: theme.spacing(1),
 	borderRadius: '13px',
-	//backgroundColor: '#a09b9b33',
-	//backgroundColor: '#171430',
 	backgroundColor: '#372E47',
 	color: theme.palette.white,
 }))

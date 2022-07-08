@@ -1,6 +1,5 @@
 import { Fragment, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-
 import { useSelector } from 'react-redux'
 import { AppWrap, MotionWrap } from '../../wrapper'
 import Typography from '@mui/material/Typography'
@@ -8,6 +7,7 @@ import styles from '../../../styles/Work.module.scss'
 import { works } from '../../constants/data-works'
 import { Tooltip } from '@mui/material'
 import styled from '@mui/system/styled'
+import Link from 'next/link'
 
 const Works = () => {
 	const isEnglishSelected = useSelector(state => state.language.isEnglish)
@@ -28,11 +28,18 @@ const Works = () => {
 		setTimeout(() => {
 			setAnimateCard([{ y: 0, opacity: 1 }])
 
-			if (item === 'All') {
+			if (item === 'All' || item === 'Todos') {
 				setFilterWork(worksFetching)
 			} else {
-				setFilterWork(worksFetching.filter(work => work.tag.includes(item)))
-				console.log(filterWork)
+				{
+					isEnglishSelected
+						? setFilterWork(
+								worksFetching.filter(work => work.tag.includes(item))
+						  )
+						: setFilterWork(
+								worksFetching.filter(work => work.tagEsp.includes(item))
+						  )
+				}
 			}
 		}, 500)
 	}
@@ -40,28 +47,50 @@ const Works = () => {
 	return (
 		<Fragment>
 			<h2 className="head-text">
-				<span>My Portfolio</span>
+				<span>{isEnglishSelected ? 'My Portfolio' : 'Mi Portafolio'}</span>
 			</h2>
 
-			<div className={styles.app__work_filter}>
-				{[
-					'Editorial Design',
-					'Infographic',
-					'Graphic Design',
-					'UI/UX',
-					'All',
-				].map((item, index) => (
-					<div
-						key={index}
-						onClick={() => handleWorkFilter(item)}
-						className={`${styles.app__work_filter_item} app__flex p-text ${
-							activeFilter === item ? `${styles.item_active}` : ''
-						}`}
-					>
-						{item}
-					</div>
-				))}
-			</div>
+			{isEnglishSelected ? (
+				<div className={styles.app__work_filter}>
+					{[
+						'Editorial Design',
+						'Infographic',
+						'Graphic Design',
+						'UI/UX',
+						'All',
+					].map((item, index) => (
+						<div
+							key={index}
+							onClick={() => handleWorkFilter(item)}
+							className={`${styles.app__work_filter_item} app__flex p-text ${
+								activeFilter === item ? `${styles.item_active}` : ''
+							}`}
+						>
+							{item}
+						</div>
+					))}
+				</div>
+			) : (
+				<div className={styles.app__work_filter}>
+					{[
+						'Diseño Editorial',
+						'Infografía',
+						'Diseño Gráfico',
+						'UI/UX',
+						'Todos',
+					].map((item, index) => (
+						<div
+							key={index}
+							onClick={() => handleWorkFilter(item)}
+							className={`${styles.app__work_filter_item} app__flex p-text ${
+								activeFilter === item ? `${styles.item_active}` : ''
+							}`}
+						>
+							{item}
+						</div>
+					))}
+				</div>
+			)}
 
 			<motion.div
 				animate={animateCard}
@@ -69,39 +98,35 @@ const Works = () => {
 				className={styles.app__work_portfolio}
 			>
 				{filterWork.map((work, index) => (
-					<StyledTooltip
-						title={
-							<Fragment>
-								<Typography color="inherit">
-									{isEnglishSelected ? work.title : work.titleEsp}
-								</Typography>
-							</Fragment>
-						}
-						key={index}
-					>
-						<div
-							className={`${styles.app__work_item} app__flex ${styles.app__flex_img}`}
+					<Link href={`/works/${work.id}`} key={index}>
+						<StyledTooltip
+							title={
+								<Fragment>
+									<Typography color="inherit">
+										{isEnglishSelected ? work.title : work.titleEsp}
+									</Typography>
+								</Fragment>
+							}
 							key={index}
 						>
-							<div className={`${styles.app__work_img} app__flex`}>
-								<img src={work.imagesUrls[0]} alt={work.title} />
-							</div>
-
-							<div className={`${styles.app__work_content} app__flex`}>
-								{/* <h5 className="bold-text">{work.title}</h5>
-							<p
-								className={`p-text ${styles.work_description}`}
-								style={{ marginTop: 10 }}
+							<div
+								className={`${styles.app__work_item} app__flex ${styles.app__flex_img}`}
+								key={index}
 							>
-								{work.description}
-							</p> */}
+								<div className={`${styles.app__work_img} app__flex`}>
+									<img src={work.imagesUrls[0]} alt={work.title} />
+								</div>
 
-								<div className={`${styles.app__work_tag} app__flex`}>
-									<p className="p-text">{work.tag}</p>
+								<div className={`${styles.app__work_content} app__flex`}>
+									<div className={`${styles.app__work_tag} app__flex`}>
+										<p className="p-text">
+											{isEnglishSelected ? work.tag : work.tagEsp}
+										</p>
+									</div>
 								</div>
 							</div>
-						</div>
-					</StyledTooltip>
+						</StyledTooltip>
+					</Link>
 				))}
 			</motion.div>
 		</Fragment>

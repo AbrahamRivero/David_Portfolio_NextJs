@@ -31,20 +31,6 @@ const Footer = () => {
 				</h2>
 			)}
 
-			{/* 			<div className={`${styles.app__footer_cards}`}>
-				<div className={`${styles.app__footer_card}`}>
-					<img src="/assets/email.png" alt="email" />
-					<a href="mailto:davmar1995@gmail.com" className="p-text">
-						davmar1995@gmail.com
-					</a>
-				</div>
-				<div className={`${styles.app__footer_card}`}>
-					<img src="/assets/mobile.png" alt="phone" />
-					<a href="tel:+34 (677) 167-665" className="p-text">
-						+34 (677) 167-665
-					</a>
-				</div>
-			</div> */}
 			<Contact />
 			<Box marginTop="20px">
 				<IconButton

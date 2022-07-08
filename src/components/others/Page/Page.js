@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Box from '@mui/material/Box'
 import Head from 'next/head'
 
-const Page = ({ pageTitle, pageHead, children }) => {
+const Page = ({ pageTitle, pageHead, backgroundColorPage, children }) => {
 	return (
 		<Fragment>
 			<Head>
@@ -12,7 +12,9 @@ const Page = ({ pageTitle, pageHead, children }) => {
 				{pageHead}
 			</Head>
 			<main>
-				<PageContentWrapper>{children}</PageContentWrapper>
+				<PageContentWrapper bgcolor={backgroundColorPage}>
+					{children}
+				</PageContentWrapper>
 			</main>
 		</Fragment>
 	)
@@ -30,7 +32,7 @@ const PageContentWrapper = styled(Box)(({ theme }) => ({
 	minHeight: '100vh',
 	display: 'flex',
 	flexDirection: 'column',
-/* 	[theme.breakpoints.up('lg')]: {
+	/* [theme.breakpoints.up('lg')]: {
 		padding: '15px 13%',
 	},
 	[theme.breakpoints.only('lg')]: {
@@ -40,3 +42,11 @@ const PageContentWrapper = styled(Box)(({ theme }) => ({
 		padding: '15px 4%',
 	}, */
 }))
+
+/* const PageContentWrapper = styled(({ className, ...props }) => (
+	<Box {...props} classes={{ popper: className }} />
+))(({ theme }) => ({
+	minHeight: '100vh',
+	display: 'flex',
+	flexDirection: 'column',
+})) */
