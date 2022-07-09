@@ -51,14 +51,12 @@ const withContainer = withHoc(() => {
 				},
 			})
 			const json = await response.json()
-			console.log(json)
 		} catch (err) {
 			console.log(err)
 		}
 
 		reset()
 		setLoading(false)
-		
 	}
 
 	return {

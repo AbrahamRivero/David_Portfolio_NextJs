@@ -1,5 +1,4 @@
 import { Fragment } from 'react'
-import { useRouter } from 'next/router'
 import { works } from '../../constants/data-works'
 import { useSelector } from 'react-redux'
 import { theme } from '../../theme'
@@ -8,11 +7,11 @@ import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 
 import styles from '../../../styles/Work.module.scss'
+import Carousel from '../../components/others/Carousel/Carousel'
 
-const PortfolioWorkPage = () => {
-	const router = useRouter()
+const PortfolioWorkPage = ({ selectedWork }) => {
 	const isEnglishSelected = useSelector(state => state.language.isEnglish)
-	const selectedWork = works.find(work => work.id === router.query.workId)
+
 	return (
 		<Page pageTitle="Selected Work Page" backgroundColorPage="#4A4E65">
 			<Fragment>
@@ -20,9 +19,10 @@ const PortfolioWorkPage = () => {
 					display="flex"
 					flexDirection="column"
 					alignItems="center"
-					marginTop={15}
+					marginTop={20}
+					marginBottom={15}
 				>
-					<Box height="400px" width="70%" bgcolor="#2e3171"></Box>
+					<Carousel images={selectedWork.imagesUrls} />
 					<Box display="flex" flexDirection="row" width="70%">
 						<Box
 							height="auto"
@@ -36,21 +36,26 @@ const PortfolioWorkPage = () => {
 							<Typography variant="h2">
 								{isEnglishSelected ? 'Title:' : 'Título:'}
 							</Typography>
-							<Typography variant="body1" marginBottom={4}>
+							<Typography variant="h4" marginTop={2} marginBottom={4}>
 								{isEnglishSelected
 									? selectedWork?.title
 									: selectedWork?.titleEsp}
 							</Typography>
-							<Typography variant="h4">
+							<Typography variant="h3">
 								{isEnglishSelected ? 'Tag:' : 'Tipo de Proyecto:'}
 							</Typography>
-							<Typography variant="body1" marginBottom={4}>
-								{isEnglishSelected ? selectedWork?.tag : selectedWork?.tag}
+							<Typography
+								variant="h4"
+								marginTop={2}
+								marginBottom={4}
+								fontSize="1em"
+							>
+								{isEnglishSelected ? selectedWork?.tag : selectedWork?.tagEsp}
 							</Typography>
 							<Typography variant="h4">
 								{isEnglishSelected ? 'Tools:' : 'Herramientas:'}
 							</Typography>
-							<Box display="flex" flexWrap="wrap">
+							<Box display="flex" flexWrap="wrap" marginTop={1}>
 								{selectedWork?.tools.map((tool, index) => {
 									return (
 										<Fragment key={index}>
@@ -59,8 +64,9 @@ const PortfolioWorkPage = () => {
 													variant="body2"
 													bgcolor="#fff"
 													borderRadius="13px"
-													padding="3px"
+													padding="4px"
 													margin="5px"
+													fontWeight={700}
 													color={theme.palette.black}
 												>
 													{tool}
@@ -80,8 +86,10 @@ const PortfolioWorkPage = () => {
 							padding={5}
 							color={theme.palette.primary.contrastText}
 						>
-							<Typography variant="h3">Description:</Typography>
-							<Typography variant="body1">
+							<Typography variant="h3">
+								{isEnglishSelected ? 'Description:' : 'Descripción:'}
+							</Typography>
+							<Typography variant="body1" marginTop={2}>
 								{isEnglishSelected
 									? selectedWork?.description
 									: selectedWork?.descriptionEsp}
@@ -95,3 +103,19 @@ const PortfolioWorkPage = () => {
 }
 
 export default PortfolioWorkPage
+
+export async function getStaticProps(context) {
+	const workId = context.params.workId
+	return {
+		props: {
+			selectedWork: works.find(work => work.id === workId),
+		}, // will be passed to the page component as props
+	}
+}
+
+export async function getStaticPaths() {
+	return {
+		paths: works.map(work => ({ params: { workId: work.id.toString() } })),
+		fallback: true, // false or 'blocking'
+	}
+}

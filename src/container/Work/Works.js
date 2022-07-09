@@ -2,12 +2,13 @@ import { Fragment, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useSelector } from 'react-redux'
 import { AppWrap, MotionWrap } from '../../wrapper'
-import Typography from '@mui/material/Typography'
-import styles from '../../../styles/Work.module.scss'
 import { works } from '../../constants/data-works'
-import { Tooltip } from '@mui/material'
+import Typography from '@mui/material/Typography'
+import Tooltip from '@mui/material/Tooltip'
 import styled from '@mui/system/styled'
 import Link from 'next/link'
+
+import styles from '../../../styles/Work.module.scss'
 
 const Works = () => {
 	const isEnglishSelected = useSelector(state => state.language.isEnglish)
@@ -99,7 +100,7 @@ const Works = () => {
 			>
 				{filterWork.map((work, index) => (
 					<Link href={`/works/${work.id}`} key={index}>
-						<StyledTooltip
+						<Tooltip
 							title={
 								<Fragment>
 									<Typography color="inherit">
@@ -125,7 +126,7 @@ const Works = () => {
 									</div>
 								</div>
 							</div>
-						</StyledTooltip>
+						</Tooltip>
 					</Link>
 				))}
 			</motion.div>
@@ -138,11 +139,3 @@ export default AppWrap(
 	'work',
 	'app__workBg'
 )
-
-const StyledTooltip = styled(({ className, ...props }) => (
-	<Tooltip {...props} classes={{ popper: className }} />
-))(({ theme }) => ({
-	color: 'rgba(0, 0, 0, 0.87)',
-	maxWidth: 220,
-	fontSize: theme.typography.pxToRem(12),
-}))

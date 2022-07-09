@@ -8,7 +8,6 @@ const languageSlice = createSlice({
 	reducers: {
 		toggleLanguage(state) {
 			state.isEnglish = !state.isEnglish
-			console.log(state.isEnglish)
 		},
 	},
 })
