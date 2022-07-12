@@ -40,7 +40,7 @@ export const abouts = [
 	},
 	{
 		title: 'UI/UX Designer',
-		titleEsp: 'Diseñador de UI/UX',
+		titleEsp: 'Diseñador UI/UX',
 		description: `Within the world of web design, what caught my attention the most was everything
 		related to UX/UI design because of the sense of creative freedom it gives me. In my opinion,
 		being a good UX/UI designer is the goal I didn't know I would aspire to when I started my studies.

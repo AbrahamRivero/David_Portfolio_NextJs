@@ -1,5 +1,5 @@
-import { Box, Radio, Typography } from '@mui/material'
 import { Fragment } from 'react'
+import Box from '@mui/material/Box'
 
 import classes from '../../../../styles/Carousel.module.scss'
 

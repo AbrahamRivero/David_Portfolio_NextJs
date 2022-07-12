@@ -5,9 +5,12 @@ import { theme } from '../../theme'
 import Page from '../../components/others/Page/Page'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
+import Chip from '@mui/material/Chip'
+import Avatar from '@mui/material/Avatar'
 
 import styles from '../../../styles/Work.module.scss'
 import Carousel from '../../components/others/Carousel/Carousel'
+import { styled } from '@mui/system'
 
 const PortfolioWorkPage = ({ selectedWork }) => {
 	const isEnglishSelected = useSelector(state => state.language.isEnglish)
@@ -20,7 +23,7 @@ const PortfolioWorkPage = ({ selectedWork }) => {
 					flexDirection="column"
 					alignItems="center"
 					marginTop={20}
-					marginBottom={15}
+					marginBottom={5}
 				>
 					<Carousel images={selectedWork.imagesUrls} />
 					<Box display="flex" flexDirection="row" width="70%">
@@ -33,10 +36,15 @@ const PortfolioWorkPage = ({ selectedWork }) => {
 							padding={1.5}
 							color={theme.palette.primary.contrastText}
 						>
-							<Typography variant="h2">
+							{/* <Typography variant="h2">
 								{isEnglishSelected ? 'Title:' : 'Título:'}
-							</Typography>
-							<Typography variant="h4" marginTop={2} marginBottom={4}>
+							</Typography> */}
+							<Typography
+								variant="h2"
+								marginTop={2}
+								marginBottom={4}
+								fontWeight={800}
+							>
 								{isEnglishSelected
 									? selectedWork?.title
 									: selectedWork?.titleEsp}
@@ -59,7 +67,7 @@ const PortfolioWorkPage = ({ selectedWork }) => {
 								{selectedWork?.tools.map((tool, index) => {
 									return (
 										<Fragment key={index}>
-											<div className={`${styles.app__work_tag} app__flex`}>
+											{/* 		<div className={`${styles.app__work_tag} app__flex`}>
 												<Typography
 													variant="body2"
 													bgcolor="#fff"
@@ -71,7 +79,12 @@ const PortfolioWorkPage = ({ selectedWork }) => {
 												>
 													{tool}
 												</Typography>
-											</div>
+											</div> */}
+
+											<ToolsChip
+												avatar={<Avatar src={tool.toolImage} />}
+												label={tool.toolName}
+											/>
 										</Fragment>
 									)
 								})}
@@ -79,17 +92,17 @@ const PortfolioWorkPage = ({ selectedWork }) => {
 						</Box>
 						<Box
 							width="60%"
-							height="auto"
+							height=""
 							marginTop="50px"
 							marginLeft="50px"
 							bgcolor="#00000017"
 							padding={5}
 							color={theme.palette.primary.contrastText}
 						>
-							<Typography variant="h3">
+							{/* <Typography variant="h3">
 								{isEnglishSelected ? 'Description:' : 'Descripción:'}
-							</Typography>
-							<Typography variant="body1" marginTop={2}>
+							</Typography> */}
+							<Typography variant="h3" fontWeight={600}>
 								{isEnglishSelected
 									? selectedWork?.description
 									: selectedWork?.descriptionEsp}
@@ -119,3 +132,9 @@ export async function getStaticPaths() {
 		fallback: true, // false or 'blocking'
 	}
 }
+
+const ToolsChip = styled(Chip)(({ theme }) => ({
+	color: theme.palette.white,
+	margin: '3px',
+	padding: '5px',
+}))

@@ -18,7 +18,10 @@ export const works = [
 			'Esta es mi primera aproximación seria al mundo del diseño web mientras cursaba el Postgrado de Diseño Web de la ESAT.\n        Este primer proyecto consistía en un About Me, una especie de carta de presentación digital. Mi idea, desde el principio, era hacer un diseño sencillo\n        que pudiese ampliar en el futuro con nueva información, nuevos proyectos que he ido realizando… Es el primer borrador de la web que estás visualizando en este momento.',
 		tag: 'UI/UX',
 		tagEsp: 'UI/UX',
-		tools: ['Figma', 'WordPress'],
+		tools: [
+			{ toolImage: '/assets/figma.png', toolName: 'Figma' },
+			{ toolImage: '/assets/WordPress.png', toolName: 'WordPress' },
+		],
 		imagesUrls: [
 			'/assets/UXUI/About-Me-PC-1.jpg',
 			'/assets/UXUI/About-Me-PC-2.jpg',
@@ -37,7 +40,10 @@ export const works = [
 			'Este fue el trabajo final realizado para el postgrado de diseño web de la ESAT.\n        El objetivo del proyecto era realizar nuestra web portfolio usando React o Wordpress.\n        Yo opté por usar Wordpress ya que consideraba que me sería más útil aprender a manejarlo.\n        La idea que quise llevar a cabo con este proyecto era la de una web limpia, sin distracciones para el usuario, en la que lo único\n        que pudiese hacer es seguir bajando para que lo único que pudiese distraerlo fuesen las imágenes de varios de los trabajos que había ido realizando.\n        ',
 		tag: 'UI/UX',
 		tagEsp: 'UI/UX',
-		tools: ['Figma', 'WordPress'],
+		tools: [
+			{ toolImage: '/assets/figma.png', toolName: 'Figma' },
+			{ toolImage: '/assets/WordPress.png', toolName: 'WordPress' },
+		],
 		imagesUrls: [
 			'/assets/UXUI/Portfolio PC 1.jpg',
 			'/assets/UXUI/Portfolio PC 2.jpg',
@@ -56,7 +62,15 @@ export const works = [
 			'Este es el segundo proyecto que realicé durante el Postgrado en la ESAT.\n        La idea del proyecto era realizar una web responsive para un producto o servicio.\n        Yo decidí tomar prestado el proyecto de unos amigos para realizar esta web.\n        Su proyecto era “Som L’Horta” y consistía en una empresa de venta de frutas y verduras del campo a casa, prescindiendo de intermediarios.\n        Quise que el diseño de esta web fuese un diseño limpio, que no estuviese lleno de información,\n        tratando de buscar una sensación de frescura y proximidad hacia el usuario ya que son algunos de los valores que promovían en Som L’Horta.\n        ',
 		tag: 'UI/UX',
 		tagEsp: 'UI/UX',
-		tools: ['Figma', 'WordPress', 'Illustrator', 'Photoshop'],
+		tools: [
+			{ toolImage: '/assets/figma.png', toolName: 'Figma' },
+			{ toolImage: '/assets/WordPress.png', toolName: 'WordPress' },
+			{
+				toolImage: '/assets/Illustrator.png',
+				toolName: 'Illustrator',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: [
 			"/assets/UXUI/Som L'Horta PC 1.jpg",
 			"/assets/UXUI/Som L'Horta PC 2.jpg",
@@ -75,9 +89,15 @@ export const works = [
 			"This image shows the different accused for the Catalonia independence\n        attempt. It shows the crimes of which each of those involved\n        is accused and the penalties requested by the Prosecutor's Office.",
 		descriptionEsp:
 			'Esta imagen muestra a los diferentes acusados por el intento\n        de independencia de Cataluña. Muestra los delitos de los que se acusa\n        a cada uno de los involucrados y las penas que solicita la Fiscalía.',
-		tag: 'Infographic',
-		tagEsp: 'Infografía',
-		tools: ['Illustrator', 'Photoshop'],
+		tag: 'Graphic Design',
+		tagEsp: 'Diseño Gráfico',
+		tools: [
+			{
+				toolImage: '/assets/Illustrator.png',
+				toolName: 'Illustrator',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: ['/assets/INFOGRAFIAS/Acusados por el Procés.jpg'],
 		id: '88df2767e87a42bc81c704ab7a580b9c',
 	},
@@ -85,12 +105,17 @@ export const works = [
 		title: 'Ebola Cell',
 		titleEsp: 'Célula del Ébola',
 		description:
-			'This is an infographic made during the Ebola outbreak in 2014. This image shows the different parts of a virus cell and explains its different components.',
+			'This is an Graphic Design made during the Ebola outbreak in 2014. This image shows the different parts of a virus cell and explains its different components.',
 		descriptionEsp:
-			'Se trata de una infografía realizada durante el brote de Ébola en el año 2014. En esta imagen se muestran las diferentes partes de una célula del virus y se explican sus diferentes componentes.',
-		tag: 'Infographic',
-		tagEsp: 'Infografía',
-		tools: ['Illustrator'],
+			'Se trata de una Diseño Gráfico realizada durante el brote de Ébola en el año 2014. En esta imagen se muestran las diferentes partes de una célula del virus y se explican sus diferentes componentes.',
+		tag: 'Graphic Design',
+		tagEsp: 'Diseño Gráfico',
+		tools: [
+			{
+				toolImage: '/assets/Illustrator.png',
+				toolName: 'Illustrator',
+			},
+		],
 		imagesUrls: ['/assets/INFOGRAFIAS/Célula Ébola.jpg'],
 		id: '1b15d80581aa48b2834ac76bccf79a6d',
 	},
@@ -101,9 +126,15 @@ export const works = [
 			'This map shows the location of the 7 wonders of the modern world and gives us an image of what they look like and a short paragraph telling us their history.',
 		descriptionEsp:
 			'Este mapa muestra la localización de las 7 maravillas del mundo moderno y nos ofrece una imagen de cómo son y un pequeño párrafo que nos cuenta su historia.',
-		tag: 'Infographic',
-		tagEsp: 'Infografía',
-		tools: ['Illustrator', 'Photoshop'],
+		tag: 'Graphic Design',
+		tagEsp: 'Diseño Gráfico',
+		tools: [
+			{
+				toolImage: '/assets/Illustrator.png',
+				toolName: 'Illustrator',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: [
 			'/assets/INFOGRAFIAS/Maravillas  Mundo Moderno.jpg',
 			'/assets/INFOGRAFIAS/Maravillas Mundo Antiguo.jpg',
@@ -114,12 +145,18 @@ export const works = [
 		title: 'Marquez VS Dovizioso',
 		titleEsp: 'Marquez VS Dovizioso',
 		description:
-			'This infographic shows the evolution of the fight between Márquez and Dovizioso. It shows us the data obtained by both riders throughout a whole MotoGP season.',
+			'This Graphic Design shows the evolution of the fight between Márquez and Dovizioso. It shows us the data obtained by both riders throughout a whole MotoGP season.',
 		descriptionEsp:
-			'Esta infografía muestra la evolución de la lucha entre Márquez y Dovizioso. Nos muestra los datos obtenidos por ambos motoristas a lo largo de toda una temporada de MotoGP.',
-		tag: 'Infographic',
-		tagEsp: 'Infografía',
-		tools: ['Illustrator', 'Photoshop'],
+			'Esta Diseño Gráfico muestra la evolución de la lucha entre Márquez y Dovizioso. Nos muestra los datos obtenidos por ambos motoristas a lo largo de toda una temporada de MotoGP.',
+		tag: 'Graphic Design',
+		tagEsp: 'Diseño Gráfico',
+		tools: [
+			{
+				toolImage: '/assets/Illustrator.png',
+				toolName: 'Illustrator',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: ['/assets/INFOGRAFIAS/Marquez VS Dovizioso.jpg'],
 		id: 'e6e2f4f1cebc44d38b8e43d95a1a00a5',
 	},
@@ -127,12 +164,17 @@ export const works = [
 		title: 'Spread of viruses',
 		titleEsp: 'Propagación de los virus',
 		description:
-			'This infographic shows the method of virus propagation. The idea for this image came about during the 2014 Ebola epidemic.',
+			'This Graphic Design shows the method of virus propagation. The idea for this image came about during the 2014 Ebola epidemic.',
 		descriptionEsp:
-			'Esta infografía muestra el método de propagación de los virus. La idea de esta imagen surgió durante la epidemia de Ébola del año 2014.',
-		tag: 'Infographic',
-		tagEsp: 'Infografía',
-		tools: ['Illustrator'],
+			'Esta Diseño Gráfico muestra el método de propagación de los virus. La idea de esta imagen surgió durante la epidemia de Ébola del año 2014.',
+		tag: 'Graphic Design',
+		tagEsp: 'Diseño Gráfico',
+		tools: [
+			{
+				toolImage: '/assets/Illustrator.png',
+				toolName: 'Illustrator',
+			},
+		],
 		imagesUrls: ['/assets/INFOGRAFIAS/Propagación Ébola.jpg'],
 		id: 'd0d641337693492e8ce3ff113de9d36d',
 	},
@@ -140,12 +182,17 @@ export const works = [
 		title: 'Measles',
 		titleEsp: 'El sarampión',
 		description:
-			'This infographic tries to explain in a clear way what measles is, its symptoms and interesting facts about the disease. This idea was born after the outbreak of this disease in Italy and Israel in 2018.',
+			'This Graphic Design tries to explain in a clear way what measles is, its symptoms and interesting facts about the disease. This idea was born after the outbreak of this disease in Italy and Israel in 2018.',
 		descriptionEsp:
-			'Esta infografía trata de explicar de manera clara qué es el sarampión, sus síntomas y datos de interés relativos a la enfermedad. Esta idea nació tras el brote de esta enfermedad en Italia e Israel en el año 2018.',
-		tag: 'Infographic',
-		tagEsp: 'Infografía',
-		tools: ['Illustrator'],
+			'Esta Diseño Gráfico trata de explicar de manera clara qué es el sarampión, sus síntomas y datos de interés relativos a la enfermedad. Esta idea nació tras el brote de esta enfermedad en Italia e Israel en el año 2018.',
+		tag: 'Graphic Design',
+		tagEsp: 'Diseño Gráfico',
+		tools: [
+			{
+				toolImage: '/assets/Illustrator.png',
+				toolName: 'Illustrator',
+			},
+		],
 		imagesUrls: ['/assets/INFOGRAFIAS/Sarampión.jpg'],
 		id: 'f75811dfb7d244cca5d914ad5da33ca3',
 	},
@@ -156,9 +203,14 @@ export const works = [
 			'The first chart shows the basic composition of each of the major blood groups. Depending on the antigen and antibody it has (or not) it is classified in one way or another.\n\t\tThe second chart shows the relationship between the different types of blood to know to whom you can donate blood and from whom you can receive it.\n\t\t',
 		descriptionEsp:
 			'La primera tabla muestra la composición básica de cada uno de los principales grupos sanguíneos. Dependiendo del antígeno y el anticuerpo que tiene (o no) se clasifica de una manera u otra.\n\t\tLa segunda tabla muestra la relación entre los diferentes tipos de sangre para saber a quien se le puede donar sangre y de quien se puede recibir.\n\t\t',
-		tag: 'Infographic',
-		tagEsp: 'Infografía',
-		tools: ['Illustrator'],
+		tag: 'Graphic Design',
+		tagEsp: 'Diseño Gráfico',
+		tools: [
+			{
+				toolImage: '/assets/Illustrator.png',
+				toolName: 'Illustrator',
+			},
+		],
 		imagesUrls: [
 			'/assets/INFOGRAFIAS/Tabla 1 Sangre.jpg',
 			'/assets/INFOGRAFIAS/Tabla 2 Sangre.jpg',
@@ -169,12 +221,22 @@ export const works = [
 		title: 'Types of stars',
 		titleEsp: 'Tipos de estrellas',
 		description:
-			'This infographic, designed for National Geographic magazine, tells us about the main classification of stars. It provides information about each type of star along with a comparison of sizes and their temperatures.',
+			'This Graphic Design, designed for National Geographic magazine, tells us about the main classification of stars. It provides information about each type of star along with a comparison of sizes and their temperatures.',
 		descriptionEsp:
-			'Esta infografía, diseñada para la revista National Geographic, nos habla sobre la principal clasificación de las estrellas. Ofrece información sobre cada tipo de estrellas junto a una comparativa de tamaños y sus temperaturas.',
-		tag: 'Infographic',
-		tagEsp: 'Infografía',
-		tools: ['InDesign', 'Illustrator', 'Photoshop'],
+			'Esta Diseño Gráfico, diseñada para la revista National Geographic, nos habla sobre la principal clasificación de las estrellas. Ofrece información sobre cada tipo de estrellas junto a una comparativa de tamaños y sus temperaturas.',
+		tag: 'Graphic Design',
+		tagEsp: 'Diseño Gráfico',
+		tools: [
+			{
+				toolImage: '/assets/InDesign.png',
+				toolName: 'InDesign',
+			},
+			{
+				toolImage: '/assets/Illustrator.png',
+				toolName: 'Illustrator',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: ['/assets/INFOGRAFIAS/Tipos de estrellas.jpg'],
 		id: 'c0d5e56b35c14873b6d7f4181b71a4bc',
 	},
@@ -185,9 +247,14 @@ export const works = [
 			'This circle shows the score obtained by Valencia Basket in each of its games during the 2017 Euroleague basketball.',
 		descriptionEsp:
 			'Este círculo muestra la puntuación obtenida por el Valencia Basket en cada uno de sus partidos durante la Euroliga de baloncesto de 2017.',
-		tag: 'Infographic',
-		tagEsp: 'Infografía',
-		tools: ['Illustrator'],
+		tag: 'Graphic Design',
+		tagEsp: 'Diseño Gráfico',
+		tools: [
+			{
+				toolImage: '/assets/Illustrator.png',
+				toolName: 'Illustrator',
+			},
+		],
 		imagesUrls: ['/assets/INFOGRAFIAS/Valencia Basket.jpg'],
 		id: 'bbedfeb48b81406a8217790b56abdcbd',
 	},
@@ -200,7 +267,13 @@ export const works = [
 			'Consiste en los carteles para Redes Sociales (tanto post como stories) con las diferentes firmas de autores que irían a la Feria del libro de Murcia con la Editorial Sargantana y NPQ Editores.',
 		tag: 'Graphic Design',
 		tagEsp: 'Diseño Gráfico',
-		tools: ['InDesign', 'Photoshop'],
+		tools: [
+			{
+				toolImage: '/assets/InDesign.png',
+				toolName: 'InDesign',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: [
 			'/assets/DISEÑO GRÁFICO/FERIA MURCIA/Post_Murcia_NPQ.jpg',
 			'/assets/DISEÑO GRÁFICO/FERIA MURCIA/Post_Murcia_Sargantana.jpg',
@@ -218,7 +291,13 @@ export const works = [
 			'Consiste en una pequeña muestra de los carteles para Redes Sociales (tanto post como stories) con las diferentes firmas de autores que irían a la Feria del libro de Valencia con la Editorial Sargantana, NPQ Editores y la Editorial Brief.',
 		tag: 'Graphic Design',
 		tagEsp: 'Diseño Gráfico',
-		tools: ['InDesign', 'Photoshop'],
+		tools: [
+			{
+				toolImage: '/assets/InDesign.png',
+				toolName: 'InDesign',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: [
 			'/assets/DISEÑO GRÁFICO/FERIA VALENCIA/Brief 14-24.jpg',
 			'/assets/DISEÑO GRÁFICO/FERIA VALENCIA/NPQ 16.jpg',
@@ -237,7 +316,13 @@ export const works = [
 			'Se trata de los carteles para Redes Sociales (tanto post como stories) para la 1ª edición de la feria del libro de la Valldigna. Muestra los diferentes autores de la Editorial Sargantana que fueron a firmar a esta Feria.',
 		tag: 'Graphic Design',
 		tagEsp: 'Diseño Gráfico',
-		tools: ['InDesign', 'Photoshop'],
+		tools: [
+			{
+				toolImage: '/assets/InDesign.png',
+				toolName: 'InDesign',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: [
 			'/assets/DISEÑO GRÁFICO/FERIA VALLDIGNA/Post_Valldigna.jpg',
 			'/assets/DISEÑO GRÁFICO/FERIA VALLDIGNA/Stories_Valldigna.jpg',
@@ -253,7 +338,17 @@ export const works = [
 			'Uno de los proyectos que realicé para el Grupo Editorial Sargantana. Se trata de un catálogo en el que se explican diferentes actividades orientadas a distintos cursos de la etapa escolar. Se explica en qué consiste la actividad y se ofrecen datos como los materiales necesarios y el precio.',
 		tag: 'Editorial Design',
 		tagEsp: 'Diseño Editorial',
-		tools: ['InDesign', 'Illustrator', 'Photoshop'],
+		tools: [
+			{
+				toolImage: '/assets/InDesign.png',
+				toolName: 'InDesign',
+			},
+			{
+				toolImage: '/assets/Illustrator.png',
+				toolName: 'Illustrator',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: [
 			'/assets/DISEÑO EDITORIAL/CATÁLOGO ACTIVIDADES/Catalogo actividades 1.jpg',
 			'/assets/DISEÑO EDITORIAL/CATÁLOGO ACTIVIDADES/Catalogo actividades 2.jpg',
@@ -273,7 +368,17 @@ export const works = [
 			'Este proyecto fue otro de los que realicé para el Grupo Editorial Sargantana. Se trata de un catálogo para vender libros a colegios. Se muestran los diferentes títulos de la editorial que pueden interesar a un colegio, clasificados por edades.',
 		tag: 'Editorial Design',
 		tagEsp: 'Diseño Editorial',
-		tools: ['InDesign', 'Illustrator', 'Photoshop'],
+		tools: [
+			{
+				toolImage: '/assets/InDesign.png',
+				toolName: 'InDesign',
+			},
+			{
+				toolImage: '/assets/Illustrator.png',
+				toolName: 'Illustrator',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: [
 			'/assets/DISEÑO EDITORIAL/CATÁLOGO COLEGIOS/Catálogo colegios 1.jpg',
 			'/assets/DISEÑO EDITORIAL/CATÁLOGO COLEGIOS/Catálogo colegios 2.jpg',
@@ -293,7 +398,13 @@ export const works = [
 			'Uno de los proyectos que realicé para el Grupo Editorial Sargantana. Se trata de un catálogo en el que se muestran los cómics publicados por la editorial. Primero se muestran las novedades y luego los productos en stock.',
 		tag: 'Editorial Design',
 		tagEsp: 'Diseño Editorial',
-		tools: ['InDesign', 'Photoshop'],
+		tools: [
+			{
+				toolImage: '/assets/InDesign.png',
+				toolName: 'InDesign',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: [
 			'/assets/DISEÑO EDITORIAL/CATÁLOGO ALETA/Catálogo Aleta 1.jpg',
 			'/assets/DISEÑO EDITORIAL/CATÁLOGO ALETA/Catálogo Aleta 2.jpg',
@@ -313,7 +424,13 @@ export const works = [
 			'Este proyecto es el catálogo general para el Grupo Editorial Sargantana. En él se incluyen las obras de las 5 editoriales que se engloban bajo el nombre del grupo. Está diseñado de forma modular para poder extraer el catálogo de cada una de las editoriales e imprimirlo por separado.',
 		tag: 'Editorial Design',
 		tagEsp: 'Diseño Editorial',
-		tools: ['InDesign', 'Photoshop'],
+		tools: [
+			{
+				toolImage: '/assets/InDesign.png',
+				toolName: 'InDesign',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: [
 			'/assets/DISEÑO EDITORIAL/CATÁLOGO GENERAL/Catálogo general 1.jpg',
 			'/assets/DISEÑO EDITORIAL/CATÁLOGO GENERAL/Catálogo general 2.jpg',
@@ -333,7 +450,21 @@ export const works = [
 			'Publicación creada para mi Trabajo de Fin de Grado (TFG). Consiste en un suplemento para el periódico Levante-EMV de periodismo científico y sanitario. El modelo de publicación se basó enteramente en el estilo del Levante-EMV.\n\t\tDecidí hacer este proyecto como TFG debido a mi interés por el mundo del diseño de publicaciones y el periodismo científico. Fue una buena oportunidad para juntar dos de mis pasiones.\n\t\t',
 		tag: 'Editorial Design',
 		tagEsp: 'Diseño Editorial',
-		tools: ['QuarkXPress', 'InDesign', 'Photoshop', 'Illustrator'],
+		tools: [
+			{
+				toolImage: '/assets/QuarkXPress.png',
+				toolName: 'QuarkXPress',
+			},
+			{
+				toolImage: '/assets/InDesign.png',
+				toolName: 'InDesign',
+			},
+			{
+				toolImage: '/assets/Illustrator.png',
+				toolName: 'Illustrator',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: [
 			'/assets/DISEÑO EDITORIAL/POLVO DE ESTRELLAS/1.jpg',
 			'/assets/DISEÑO EDITORIAL/POLVO DE ESTRELLAS/2.jpg',
@@ -351,7 +482,13 @@ export const works = [
 			'Libro diseñado durante mi etapa trabajando para la Editorial Sargantana. Se compone de dos partes principales: la primera es la digitalización del libro 50 años del Rotary Club de Valencia y la segunda es la actualización de ese libro con los acontecimientos relevantes en la historia del club hasta llegar al año 2021.',
 		tag: 'Editorial Design',
 		tagEsp: 'Diseño Editorial',
-		tools: ['InDesign', 'Photoshop'],
+		tools: [
+			{
+				toolImage: '/assets/InDesign.png',
+				toolName: 'InDesign',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: [
 			'/assets/DISEÑO EDITORIAL/LIBROS/93 AÑOS DEL ROTARY CLUB DE VALENCIA.jpg',
 		],
@@ -366,7 +503,13 @@ export const works = [
 			'Libro diseñado durante mi etapa trabajando para la Editorial Sargantana. Consiste en una recopilación de historias escritas por alumnos de primaria de diferentes colegios de Alberic.',
 		tag: 'Editorial Design',
 		tagEsp: 'Diseño Editorial',
-		tools: ['InDesign', 'Photoshop'],
+		tools: [
+			{
+				toolImage: '/assets/InDesign.png',
+				toolName: 'InDesign',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: ['/assets/DISEÑO EDITORIAL/LIBROS/ALBERICONTES.jpg'],
 		id: 'feed396b61c142f5aa96155ea12e7155',
 	},
@@ -379,7 +522,13 @@ export const works = [
 			'Libro diseñado durante mi etapa trabajando para la Editorial Sargantana. Esta novela nos relata la historia de un profesor de liceo que se alista en la Marina y acaba en la pobreza mientras recorre Francia.',
 		tag: 'Editorial Design',
 		tagEsp: 'Diseño Editorial',
-		tools: ['InDesign', 'Photoshop'],
+		tools: [
+			{
+				toolImage: '/assets/InDesign.png',
+				toolName: 'InDesign',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: [
 			'/assets/DISEÑO EDITORIAL/LIBROS/BAJO LA ESFERA DE LA INDIGENCIA.jpg',
 		],
@@ -394,7 +543,13 @@ export const works = [
 			'Libro diseñado durante mi etapa trabajando para la Editorial Sargantana. Agrupa diferentes sucesos acontecidos durante varios siglos de historia de la Villa de Ayora.',
 		tag: 'Editorial Design',
 		tagEsp: 'Diseño Editorial',
-		tools: ['InDesign', 'Photoshop'],
+		tools: [
+			{
+				toolImage: '/assets/InDesign.png',
+				toolName: 'InDesign',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: ['/assets/DISEÑO EDITORIAL/LIBROS/CRONOLOGIA LOCAL AYORA.jpg'],
 		id: '5603fb8c0e0c4af7933ba0600b8f853f',
 	},
@@ -407,7 +562,13 @@ export const works = [
 			'El primer libro que diseñé durante mi etapa trabajando para la Editorial Sargantana. Consiste en una recopilación de acuarelas, diseñadas por Antonio Ponce, que retratan la ciudad de Cuenca.',
 		tag: 'Editorial Design',
 		tagEsp: 'Diseño Editorial',
-		tools: ['InDesign', 'Photoshop'],
+		tools: [
+			{
+				toolImage: '/assets/InDesign.png',
+				toolName: 'InDesign',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: ['/assets/DISEÑO EDITORIAL/LIBROS/CUENCA EN 50 ACUARELAS.jpg'],
 		id: 'd8cd051f255745d58f0ae931d76a99ea',
 	},
@@ -420,7 +581,13 @@ export const works = [
 			'Libro diseñado durante mi etapa trabajando para la Editorial Sargantana. Historia de fantasía escrita en la que narra las aventuras de dos dioses, Día y Noche, y su lucha contra poderosos enemigos para salvar su mundo.',
 		tag: 'Editorial Design',
 		tagEsp: 'Diseño Editorial',
-		tools: ['InDesign', 'Photoshop'],
+		tools: [
+			{
+				toolImage: '/assets/InDesign.png',
+				toolName: 'InDesign',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: ['/assets/DISEÑO EDITORIAL/LIBROS/DÍA Y NOCHE.jpg'],
 		id: '8e58d14f6b06491982f69fdbfb624405',
 	},
@@ -433,7 +600,13 @@ export const works = [
 			'Libro diseñado durante mi etapa trabajando para la Editorial Sargantana. Cuenta la historia de una chica que intercambia correspondencia con un escritor y nos enseña cómo va evolucionando su relación sin conocerse en persona.',
 		tag: 'Editorial Design',
 		tagEsp: 'Diseño Editorial',
-		tools: ['InDesign', 'Photoshop'],
+		tools: [
+			{
+				toolImage: '/assets/InDesign.png',
+				toolName: 'InDesign',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: ['/assets/DISEÑO EDITORIAL/LIBROS/GRACIAS POR LEERME.jpg'],
 		id: 'c36f2dce012e479ea0420602e412c69c',
 	},
@@ -446,7 +619,13 @@ export const works = [
 			'Libro diseñado durante mi etapa trabajando para la Editorial Sargantana. Cuenta la historia de una tasadora de arte que se ve envuelta en la investigación del asesinato de un amigo suyo.',
 		tag: 'Editorial Design',
 		tagEsp: 'Diseño Editorial',
-		tools: ['InDesign', 'Photoshop'],
+		tools: [
+			{
+				toolImage: '/assets/InDesign.png',
+				toolName: 'InDesign',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: ['/assets/DISEÑO EDITORIAL/LIBROS/LA DANZA DEL PULPO.jpg'],
 		id: '813920cfd25f4102aa2d3b8525582ab8',
 	},
@@ -459,7 +638,13 @@ export const works = [
 			'Libro diseñado durante mi etapa trabajando para la Editorial Sargantana. Primera parte de una trilogía que nos sitúa en Madrid mientras acompañamos al protagonista durante la investigación de un atentado.',
 		tag: 'Editorial Design',
 		tagEsp: 'Diseño Editorial',
-		tools: ['InDesign', 'Photoshop'],
+		tools: [
+			{
+				toolImage: '/assets/InDesign.png',
+				toolName: 'InDesign',
+			},
+			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
+		],
 		imagesUrls: ['/assets/DISEÑO EDITORIAL/LIBROS/LA OBRA MAESTRA.jpg'],
 		id: '8a46c72277564389b5a66795621c2c92',
 	},

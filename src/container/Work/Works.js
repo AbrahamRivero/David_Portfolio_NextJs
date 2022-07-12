@@ -53,43 +53,35 @@ const Works = () => {
 
 			{isEnglishSelected ? (
 				<div className={styles.app__work_filter}>
-					{[
-						'Editorial Design',
-						'Infographic',
-						'Graphic Design',
-						'UI/UX',
-						'All',
-					].map((item, index) => (
-						<div
-							key={index}
-							onClick={() => handleWorkFilter(item)}
-							className={`${styles.app__work_filter_item} app__flex p-text ${
-								activeFilter === item ? `${styles.item_active}` : ''
-							}`}
-						>
-							{item}
-						</div>
-					))}
+					{['Editorial Design', 'Graphic Design', 'UI/UX', 'All'].map(
+						(item, index) => (
+							<div
+								key={index}
+								onClick={() => handleWorkFilter(item)}
+								className={`${styles.app__work_filter_item} app__flex p-text ${
+									activeFilter === item ? `${styles.item_active}` : ''
+								}`}
+							>
+								{item}
+							</div>
+						)
+					)}
 				</div>
 			) : (
 				<div className={styles.app__work_filter}>
-					{[
-						'Diseño Editorial',
-						'Infografía',
-						'Diseño Gráfico',
-						'UI/UX',
-						'Todos',
-					].map((item, index) => (
-						<div
-							key={index}
-							onClick={() => handleWorkFilter(item)}
-							className={`${styles.app__work_filter_item} app__flex p-text ${
-								activeFilter === item ? `${styles.item_active}` : ''
-							}`}
-						>
-							{item}
-						</div>
-					))}
+					{['Diseño Editorial', 'Diseño Gráfico', 'UI/UX', 'Todos'].map(
+						(item, index) => (
+							<div
+								key={index}
+								onClick={() => handleWorkFilter(item)}
+								className={`${styles.app__work_filter_item} app__flex p-text ${
+									activeFilter === item ? `${styles.item_active}` : ''
+								}`}
+							>
+								{item}
+							</div>
+						)
+					)}
 				</div>
 			)}
 
