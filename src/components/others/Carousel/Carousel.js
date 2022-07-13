@@ -7,7 +7,7 @@ const Carousel = ({ images }) => {
 	return (
 		<Fragment>
 			<Box className={classes.slider}>
-				{images.map((image, index) => {
+				{images?.map((image, index) => {
 					return (
 						<Fragment key={index}>
 							<input type="radio" name="slider" defaultChecked />
