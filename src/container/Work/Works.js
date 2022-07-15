@@ -9,7 +9,6 @@ import styled from '@mui/system/styled'
 import Link from 'next/link'
 
 import styles from '../../../styles/Work.module.scss'
-import ActionAreaCard from '../../components/others/Cards/WorkCards'
 import { Chip } from '@mui/material'
 
 const Works = () => {
