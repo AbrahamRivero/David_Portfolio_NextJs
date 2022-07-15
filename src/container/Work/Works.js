@@ -9,6 +9,8 @@ import styled from '@mui/system/styled'
 import Link from 'next/link'
 
 import styles from '../../../styles/Work.module.scss'
+import ActionAreaCard from '../../components/others/Cards/WorkCards'
+import { Chip } from '@mui/material'
 
 const Works = () => {
 	const isEnglishSelected = useSelector(state => state.language.isEnglish)
@@ -111,11 +113,7 @@ const Works = () => {
 								</div>
 
 								<div className={`${styles.app__work_content} app__flex`}>
-									<div className={`${styles.app__work_tag} app__flex`}>
-										<p className="p-text">
-											{isEnglishSelected ? work.tag : work.tagEsp}
-										</p>
-									</div>
+								<TagChip label={isEnglishSelected ? work.tag : work.tagEsp} />
 								</div>
 							</div>
 						</Tooltip>
@@ -131,3 +129,12 @@ export default AppWrap(
 	'work',
 	'app__workBg'
 )
+
+const TagChip = styled(Chip)(({ theme }) => ({
+	color: theme.palette.white,
+	margin: '3px',
+	padding: '5px',
+	position: 'absolute',
+	top: '-15px',
+	background: '#2e3141',
+}))

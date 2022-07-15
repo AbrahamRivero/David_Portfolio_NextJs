@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 import Box from '@mui/material/Box'
-
 import classes from '../../../../styles/Carousel.module.scss'
+import Image from 'next/image'
 
 const Carousel = ({ images }) => {
 	return (
@@ -12,7 +12,7 @@ const Carousel = ({ images }) => {
 						<Fragment key={index}>
 							<input type="radio" name="slider" defaultChecked />
 							<Box className={classes.imgBx}>
-								<img src={image} />
+								<Image src={image} />
 							</Box>
 						</Fragment>
 					)

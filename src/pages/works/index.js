@@ -6,9 +6,7 @@ import Box from '@mui/material/Box'
 const Works = () => (
 	<Page pageTitle="Works">
 		<Fragment>
-			<Box marginTop={10}>
-				<WorksComponent />
-			</Box>
+			<WorksComponent />
 		</Fragment>
 	</Page>
 )
