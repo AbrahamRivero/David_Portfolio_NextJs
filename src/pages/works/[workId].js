@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useState } from 'react'
 import { works } from '../../constants/data-works'
 import { useSelector } from 'react-redux'
 import { theme } from '../../theme'
@@ -8,8 +8,7 @@ import Box from '@mui/material/Box'
 import Chip from '@mui/material/Chip'
 import Avatar from '@mui/material/Avatar'
 import Carousel from '../../components/others/Carousel/Carousel'
-import { useRouter } from 'next/router'
-import { styled } from '@mui/system'
+import styled from '@mui/system/styled'
 
 const PortfolioWorkPage = ({ selectedWork }) => {
 	const isEnglishSelected = useSelector(state => state.language.isEnglish)
@@ -22,7 +21,7 @@ const PortfolioWorkPage = ({ selectedWork }) => {
 					display="flex"
 					flexDirection="column"
 					alignItems="center"
-					marginTop={20}
+					marginTop={15}
 					marginBottom={5}
 				>
 					<Carousel images={fetchedWork?.imagesUrls} />
