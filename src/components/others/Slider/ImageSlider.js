@@ -47,7 +47,7 @@ const ImageSlider = ({ images, title, titleEsp }) => {
 									autoPlaySpeed={10000}
 									className="owl-carousel owl-theme skill-slider"
 								>
-									{images.map(image => (
+									{images?.map(image => (
 										<Box className="item" key={image}>
 											<img src={image} alt="Image" width="70vh" height="65vh" />
 										</Box>
