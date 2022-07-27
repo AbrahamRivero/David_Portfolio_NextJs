@@ -16,7 +16,6 @@
 	.app__work_filter_item {
 		padding: 0.5rem 1rem;
 		border-radius: 0.5rem;
-		//background-color: #ffd5a4;
 		background-color: #2f3345;
 		color: #fff;
 		font-weight: 800;
@@ -40,6 +39,10 @@
 		background-color: #ad7029;
 		color: #fff;
 	}
+
+	@media screen and (max-width: 535px) {
+		flex-direction: column;
+	}
 }
 
 .app__work_portfolio {
@@ -49,16 +52,12 @@
 	align-items: center;
 
 	.app__work_item {
-		width: 350px; //corregidos
-		//height: 470px;
+		width: 350px;
 		flex-direction: column;
-
 		margin: 2rem;
 		padding: 1rem;
 		border-radius: 0.5rem;
 		background-color: #2f334540;
-		//color: #fff;
-
 		cursor: pointer;
 		transition: all 0.3s ease;
 
@@ -81,9 +80,20 @@
 			border-radius: 0.75rem;
 		}
 
-		@media screen and (max-width: 300px) {
-			width: 100%;
-			margin: 1rem;
+		@media screen and (max-width: 768px) {
+			width: 400px;
+		}
+
+		@media screen and (max-width: 425px) {
+			width: 300px;
+			margin: 0.5rem;
+			padding: 0.5rem;
+		}
+
+		@media screen and (max-width: 320px) {
+			width: 300px;
+			margin: 0.5rem;
+			padding: 0.5rem;
 		}
 	}
 }

@@ -90,4 +90,10 @@ const StyledGridItem = styled(Grid)(({ theme }) => ({
 
 const StyledTypography = styled(Typography)(({ theme }) => ({
 	color: theme.palette.white,
+	textAlign: 'center',
+
+	['@media(max-width:320px)']: {
+		margin: '3px',
+		marginTop: '5px',
+	},
 }))

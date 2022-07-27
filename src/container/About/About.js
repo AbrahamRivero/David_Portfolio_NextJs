@@ -3,6 +3,7 @@ import { abouts } from '../../constants/data-abouts'
 import { useSelector } from 'react-redux'
 import { StyledWrapper } from './AboutStyles'
 import TiangleSvg from './TiangleSvg'
+import styled from '@mui/system/styled'
 import Box from '@mui/material/Box'
 
 import styles from '../../../styles/About.module.scss'
@@ -21,7 +22,7 @@ const About = () => {
 							{index % 2 === 0 ? (
 								<Fragment>
 									<img src={about.image} alt={about.title} className="image" />
-									<Box width="500px">
+									<AboutTextContainer>
 										<h2
 											className="bold-text"
 											style={{ marginTop: 20, fontSize: '20px', color: '#fff' }}
@@ -41,11 +42,11 @@ const About = () => {
 												? about.description
 												: about.descriptionEsp}
 										</p>
-									</Box>
+									</AboutTextContainer>
 								</Fragment>
 							) : (
 								<Fragment>
-									<Box width="500px">
+									<AboutTextContainer>
 										<h2
 											className="bold-text"
 											style={{
@@ -70,7 +71,7 @@ const About = () => {
 												? about.description
 												: about.descriptionEsp}
 										</p>
-									</Box>
+									</AboutTextContainer>
 									<img src={about.image} alt={about.title} className="image" />
 								</Fragment>
 							)}
@@ -92,3 +93,10 @@ const About = () => {
 }
 
 export default About
+
+const AboutTextContainer = styled(Box)(({ theme }) => ({
+	width: '550px',
+	['@media(max-width:768px)']: {
+		width: '600px',
+	},
+}))

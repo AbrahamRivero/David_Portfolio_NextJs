@@ -121,7 +121,7 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
 		alignItems: 'flex-start',
 		flexDirection: 'column',
 
-		/* backgroundColor: '#282626f2', */
+		background: '#959797fa',
 		backgroundSize: 'cover',
 		backgroundRepeat: 'repeat',
 
@@ -131,6 +131,10 @@ const StyledDrawer = styled(Drawer)(({ theme }) => ({
 
 		[theme.breakpoints.up('md')]: {
 			width: '25%',
+		},
+
+		['@media(max-width:425px)']: {
+			width: '80%',
 		},
 
 		'& .MuiIconButton-root': {
