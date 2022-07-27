@@ -10,7 +10,7 @@ import {
 	WHATSAPP_URL,
 } from '../../constants/urls'
 import styles from '../../../styles/Footer.module.scss'
-import Contact from '../Contact'
+import Contact from '../../components/forms/Contact'
 import Box from '@mui/material/Box'
 import IconButton from '@mui/material/IconButton'
 import TelegramIcon from '@mui/icons-material/Telegram'

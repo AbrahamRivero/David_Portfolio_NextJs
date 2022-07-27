@@ -16,8 +16,6 @@ export const works = [
 			'/assets/UXUI/About-Me-PC-1.jpg',
 			'/assets/UXUI/About-Me-PC-2.jpg',
 			'/assets/UXUI/About-Me-PC-3.jpg',
-			'/assets/UXUI/About-Me-movil-1.jpg',
-			'/assets/UXUI/About-Me-movil-2.jpg',
 		],
 		id: 'af537c29563f44edaa85086c69bc5928',
 	},
@@ -38,8 +36,6 @@ export const works = [
 			'/assets/UXUI/Portfolio PC 1.jpg',
 			'/assets/UXUI/Portfolio PC 2.jpg',
 			'/assets/UXUI/Portfolio PC 3.jpg',
-			'/assets/UXUI/Portfolio movil 1.jpg',
-			'/assets/UXUI/Portfolio movil 2.jpg',
 		],
 		id: '0adb478693ab4f0c98c291708ebc403b',
 	},
@@ -65,10 +61,6 @@ export const works = [
 			"/assets/UXUI/Som L'Horta PC 1.jpg",
 			"/assets/UXUI/Som L'Horta PC 2.jpg",
 			"/assets/UXUI/Som L'Horta PC 3.jpg",
-			"/assets/UXUI/Som L'Horta PC 4.jpg",
-			"/assets/UXUI/Som L'Horta movil 1.jpg",
-			"/assets/UXUI/Som L'Horta movil 2.jpg",
-			"/assets/UXUI/Som L'Horta movil 3.jpg",
 		],
 		id: 'd7c3e58bd19a4127bdcb3d4d729330b0',
 	},
@@ -267,7 +259,7 @@ export const works = [
 		imagesUrls: [
 			'/assets/DISEÑO GRÁFICO/FERIA MURCIA/Post_Murcia_NPQ.jpg',
 			'/assets/DISEÑO GRÁFICO/FERIA MURCIA/Post_Murcia_Sargantana.jpg',
-			'/assets/DISEÑO GRÁFICO/FERIA MURCIA/Stories_Murcia_NPQ.jpg',
+
 			'/assets/DISEÑO GRÁFICO/FERIA MURCIA/Stories_Murcia_Sargantana.jpg',
 		],
 		id: '29efe7c3adea41a886f440adc33c126a',
@@ -291,9 +283,7 @@ export const works = [
 		imagesUrls: [
 			'/assets/DISEÑO GRÁFICO/FERIA VALENCIA/Brief 14-24.jpg',
 			'/assets/DISEÑO GRÁFICO/FERIA VALENCIA/NPQ 16.jpg',
-			'/assets/DISEÑO GRÁFICO/FERIA VALENCIA/NPQ 23.jpg',
 			'/assets/DISEÑO GRÁFICO/FERIA VALENCIA/Sargantana 16 Tarde.jpg',
-			'/assets/DISEÑO GRÁFICO/FERIA VALENCIA/Sargantana 17 Tarde.jpg',
 		],
 		id: '4d7ea081e0084b2ba46a7d4c03e69e19',
 	},
@@ -340,12 +330,9 @@ export const works = [
 			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
 		],
 		imagesUrls: [
-			'/assets/DISEÑO EDITORIAL/CATÁLOGO ACTIVIDADES/Catalogo actividades 1.jpg',
-			'/assets/DISEÑO EDITORIAL/CATÁLOGO ACTIVIDADES/Catalogo actividades 2.jpg',
 			'/assets/DISEÑO EDITORIAL/CATÁLOGO ACTIVIDADES/Catalogo actividades 3.jpg',
 			'/assets/DISEÑO EDITORIAL/CATÁLOGO ACTIVIDADES/Catalogo actividades 4.jpg',
 			'/assets/DISEÑO EDITORIAL/CATÁLOGO ACTIVIDADES/Catalogo actividades 5.jpg',
-			'/assets/DISEÑO EDITORIAL/CATÁLOGO ACTIVIDADES/Catalogo actividades 6.jpg',
 		],
 		id: '2a1703df7e304130b8f076641acec3d7',
 	},
@@ -373,9 +360,6 @@ export const works = [
 			'/assets/DISEÑO EDITORIAL/CATÁLOGO COLEGIOS/Catálogo colegios 1.jpg',
 			'/assets/DISEÑO EDITORIAL/CATÁLOGO COLEGIOS/Catálogo colegios 2.jpg',
 			'/assets/DISEÑO EDITORIAL/CATÁLOGO COLEGIOS/Catálogo colegios 3.jpg',
-			'/assets/DISEÑO EDITORIAL/CATÁLOGO COLEGIOS/Catálogo colegios 4.jpg',
-			'/assets/DISEÑO EDITORIAL/CATÁLOGO COLEGIOS/Catálogo colegios 5.jpg',
-			'/assets/DISEÑO EDITORIAL/CATÁLOGO COLEGIOS/Catálogo colegios 6.jpg',
 		],
 		id: 'dedf19db34b14f6bb3ff8c3921b63e4a',
 	},
@@ -399,9 +383,6 @@ export const works = [
 			'/assets/DISEÑO EDITORIAL/CATÁLOGO ALETA/Catálogo Aleta 1.jpg',
 			'/assets/DISEÑO EDITORIAL/CATÁLOGO ALETA/Catálogo Aleta 2.jpg',
 			'/assets/DISEÑO EDITORIAL/CATÁLOGO ALETA/Catálogo Aleta 3.jpg',
-			'/assets/DISEÑO EDITORIAL/CATÁLOGO ALETA/Catálogo Aleta 4.jpg',
-			'/assets/DISEÑO EDITORIAL/CATÁLOGO ALETA/Catálogo Aleta 5.jpg',
-			'/assets/DISEÑO EDITORIAL/CATÁLOGO ALETA/Catálogo Aleta 6.jpg',
 		],
 		id: '67d219b9edde4c4d8fc8d561d06f2a97',
 	},
@@ -425,9 +406,6 @@ export const works = [
 			'/assets/DISEÑO EDITORIAL/CATÁLOGO GENERAL/Catálogo general 1.jpg',
 			'/assets/DISEÑO EDITORIAL/CATÁLOGO GENERAL/Catálogo general 2.jpg',
 			'/assets/DISEÑO EDITORIAL/CATÁLOGO GENERAL/Catálogo general 3.jpg',
-			'/assets/DISEÑO EDITORIAL/CATÁLOGO GENERAL/Catálogo general 4.jpg',
-			'/assets/DISEÑO EDITORIAL/CATÁLOGO GENERAL/Catálogo general 5.jpg',
-			'/assets/DISEÑO EDITORIAL/CATÁLOGO GENERAL/Catálogo general 6.jpg',
 		],
 		id: '152e37d7bf114ee2b9bcc6e31b4b8aa4',
 	},
@@ -459,169 +437,12 @@ export const works = [
 			'/assets/DISEÑO EDITORIAL/POLVO DE ESTRELLAS/1.jpg',
 			'/assets/DISEÑO EDITORIAL/POLVO DE ESTRELLAS/2.jpg',
 			'/assets/DISEÑO EDITORIAL/POLVO DE ESTRELLAS/3.jpg',
-			'/assets/DISEÑO EDITORIAL/POLVO DE ESTRELLAS/4.jpg',
 		],
 		id: '68ae3bdc7838479fb35bbf5f83682e0d',
 	},
 	{
-		title: '93 años de historia del Rotary Club de Valencia',
-		titleEsp: '93 años de historia del Rotary Club de Valencia',
-		description:
-			'Book designed during my time working for Editorial Sargantana. It consists of two main parts: the first is the digitalization of the book 50 años de historia del Rotary Club de Valencia and the second is the update of that book with the relevant events in the history of the club until 2021.',
-		descriptionEsp:
-			'Libro diseñado durante mi etapa trabajando para la Editorial Sargantana. Se compone de dos partes principales: la primera es la digitalización del libro 50 años del Rotary Club de Valencia y la segunda es la actualización de ese libro con los acontecimientos relevantes en la historia del club hasta llegar al año 2021.',
-		tag: 'Editorial Design',
-		tagEsp: 'Diseño Editorial',
-		tools: [
-			{
-				toolImage: '/assets/InDesign.png',
-				toolName: 'InDesign',
-			},
-			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
-		],
-		imagesUrls: [
-			'/assets/DISEÑO EDITORIAL/LIBROS/93 AÑOS DEL ROTARY CLUB DE VALENCIA.jpg',
-		],
-		id: '60f91e457b384193a6c055659a939a43',
-	},
-	{
-		title: 'Albericontes 1',
-		titleEsp: 'Albericontes 1',
-		description:
-			'Book designed during my time working for Editorial Sargantana. It consists of a compilation of stories written by primary school students from different schools in Alberic.',
-		descriptionEsp:
-			'Libro diseñado durante mi etapa trabajando para la Editorial Sargantana. Consiste en una recopilación de historias escritas por alumnos de primaria de diferentes colegios de Alberic.',
-		tag: 'Editorial Design',
-		tagEsp: 'Diseño Editorial',
-		tools: [
-			{
-				toolImage: '/assets/InDesign.png',
-				toolName: 'InDesign',
-			},
-			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
-		],
-		imagesUrls: ['/assets/DISEÑO EDITORIAL/LIBROS/ALBERICONTES.jpg'],
-		id: 'feed396b61c142f5aa96155ea12e7155',
-	},
-	{
-		title: 'Bajo la esfera de la indigencia',
-		titleEsp: 'Bajo la esfera de la indigencia',
-		description:
-			'Book designed during my time working for Editorial Sargantana. This novel tells the story of a high school teacher who enlists in the Navy and ends up in poverty while traveling through France.',
-		descriptionEsp:
-			'Libro diseñado durante mi etapa trabajando para la Editorial Sargantana. Esta novela nos relata la historia de un profesor de liceo que se alista en la Marina y acaba en la pobreza mientras recorre Francia.',
-		tag: 'Editorial Design',
-		tagEsp: 'Diseño Editorial',
-		tools: [
-			{
-				toolImage: '/assets/InDesign.png',
-				toolName: 'InDesign',
-			},
-			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
-		],
-		imagesUrls: [
-			'/assets/DISEÑO EDITORIAL/LIBROS/BAJO LA ESFERA DE LA INDIGENCIA.jpg',
-		],
-		id: 'e4ea783076e749bfadefbbb4b80a6d73',
-	},
-	{
-		title: 'Cronología local Ayora',
-		titleEsp: 'Cronología local Ayora',
-		description:
-			'Book designed during my time working for Editorial Sargantana. It brings together different events that have taken place over several centuries of the history of the town of Ayora.',
-		descriptionEsp:
-			'Libro diseñado durante mi etapa trabajando para la Editorial Sargantana. Agrupa diferentes sucesos acontecidos durante varios siglos de historia de la Villa de Ayora.',
-		tag: 'Editorial Design',
-		tagEsp: 'Diseño Editorial',
-		tools: [
-			{
-				toolImage: '/assets/InDesign.png',
-				toolName: 'InDesign',
-			},
-			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
-		],
-		imagesUrls: ['/assets/DISEÑO EDITORIAL/LIBROS/CRONOLOGIA LOCAL AYORA.jpg'],
-		id: '5603fb8c0e0c4af7933ba0600b8f853f',
-	},
-	{
-		title: 'Cuenca en 50 acuarelas',
-		titleEsp: 'Cuenca en 50 acuarelas',
-		description:
-			'The first book I designed during my time working for Editorial Sargantana. It consists of a collection of watercolors, designed by Antonio Ponce, which portray the city of Cuenca.',
-		descriptionEsp:
-			'El primer libro que diseñé durante mi etapa trabajando para la Editorial Sargantana. Consiste en una recopilación de acuarelas, diseñadas por Antonio Ponce, que retratan la ciudad de Cuenca.',
-		tag: 'Editorial Design',
-		tagEsp: 'Diseño Editorial',
-		tools: [
-			{
-				toolImage: '/assets/InDesign.png',
-				toolName: 'InDesign',
-			},
-			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
-		],
-		imagesUrls: ['/assets/DISEÑO EDITORIAL/LIBROS/CUENCA EN 50 ACUARELAS.jpg'],
-		id: 'd8cd051f255745d58f0ae931d76a99ea',
-	},
-	{
-		title: 'Día y Noche',
-		titleEsp: 'Día y Noche',
-		description:
-			'Book designed during my time working for Editorial Sargantana. Fantasy story written in which narrates the adventures of two gods, Día y Noche, and their fight against powerful enemies to save their world.',
-		descriptionEsp:
-			'Libro diseñado durante mi etapa trabajando para la Editorial Sargantana. Historia de fantasía escrita en la que narra las aventuras de dos dioses, Día y Noche, y su lucha contra poderosos enemigos para salvar su mundo.',
-		tag: 'Editorial Design',
-		tagEsp: 'Diseño Editorial',
-		tools: [
-			{
-				toolImage: '/assets/InDesign.png',
-				toolName: 'InDesign',
-			},
-			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
-		],
-		imagesUrls: ['/assets/DISEÑO EDITORIAL/LIBROS/DÍA Y NOCHE.jpg'],
-		id: '8e58d14f6b06491982f69fdbfb624405',
-	},
-	{
-		title: 'Gracias por leerme',
-		titleEsp: 'Gracias por leerme',
-		description:
-			'Book designed during my time working for Editorial Sargantana. It tells the story of a girl who exchanges correspondence with a writer and shows us how their relationship evolves without meeting in person.',
-		descriptionEsp:
-			'Libro diseñado durante mi etapa trabajando para la Editorial Sargantana. Cuenta la historia de una chica que intercambia correspondencia con un escritor y nos enseña cómo va evolucionando su relación sin conocerse en persona.',
-		tag: 'Editorial Design',
-		tagEsp: 'Diseño Editorial',
-		tools: [
-			{
-				toolImage: '/assets/InDesign.png',
-				toolName: 'InDesign',
-			},
-			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
-		],
-		imagesUrls: ['/assets/DISEÑO EDITORIAL/LIBROS/GRACIAS POR LEERME.jpg'],
-		id: 'c36f2dce012e479ea0420602e412c69c',
-	},
-	{
-		title: 'La danza del pulpo',
-		titleEsp: 'La danza del pulpo',
-		description:
-			'Book designed during my time working for Editorial Sargantana. It tells the story of an art appraiser who gets involved in the investigation of the murder of a friend of hers.',
-		descriptionEsp:
-			'Libro diseñado durante mi etapa trabajando para la Editorial Sargantana. Cuenta la historia de una tasadora de arte que se ve envuelta en la investigación del asesinato de un amigo suyo.',
-		tag: 'Editorial Design',
-		tagEsp: 'Diseño Editorial',
-		tools: [
-			{
-				toolImage: '/assets/InDesign.png',
-				toolName: 'InDesign',
-			},
-			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
-		],
-		imagesUrls: ['/assets/DISEÑO EDITORIAL/LIBROS/LA DANZA DEL PULPO.jpg'],
-		id: '813920cfd25f4102aa2d3b8525582ab8',
-	},
-	{
-		title: 'La obra maestra. Obertura.',
-		titleEsp: 'La obra maestra. Obertura.',
+		title: 'Books',
+		titleEsp: 'Libros',
 		description:
 			'Book designed during my time working for Editorial Sargantana. First part of a trilogy that places us in Madrid while we accompany the protagonist during the investigation of an attack.',
 		descriptionEsp:
@@ -635,7 +456,12 @@ export const works = [
 			},
 			{ toolImage: '/assets/Photoshop.png', toolName: 'Photoshop' },
 		],
-		imagesUrls: ['/assets/DISEÑO EDITORIAL/LIBROS/LA OBRA MAESTRA.jpg'],
+		imagesUrls: [
+			'/assets/DISEÑO EDITORIAL/LIBROS/LA OBRA MAESTRA.jpg',
+			'/assets/DISEÑO EDITORIAL/LIBROS/CUENCA EN 50 ACUARELAS.jpg',
+			'/assets/DISEÑO EDITORIAL/LIBROS/DÍA Y NOCHE.jpg',
+			'/assets/DISEÑO EDITORIAL/LIBROS/GRACIAS POR LEERME.jpg',
+		],
 		id: '8a46c72277564389b5a66795621c2c92',
 	},
 ]

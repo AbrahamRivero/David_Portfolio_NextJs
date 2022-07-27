@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import { motion } from 'framer-motion'
 import { theme } from '../../../theme'
 import { useSelector } from 'react-redux'
-import { TimeLineData } from '../../../constants/data'
+import { TimeLineData } from '../../../constants/data-timeLine'
 import styled from '@mui/system/styled'
 import Timeline from '@mui/lab/Timeline'
 import TimelineItem from '@mui/lab/TimelineItem'
@@ -45,40 +45,35 @@ const VerticalTimeLine = () => {
 								flexDirection="column"
 								sx={{ py: '12px', px: 2 }}
 							>
-								{/* {experience.works.map(work => (
-									
-								))} */}
 								<Fragment key={experience.initialYear}>
-									{experience.workExperiences
-										//.filter(workExperience => workExperience._id === work._ref)
-										.map(workExperienceFiltered => (
-											<ExperienceContainer
-												whileInView={{ opacity: [0, 1] }}
-												transition={{ duration: 0.5, type: 'spring' }}
-												data-tip
-												data-for={experience.id}
-												key={workExperienceFiltered.id}
+									{experience.workExperiences.map(workExperienceFiltered => (
+										<ExperienceContainer
+											whileInView={{ opacity: [0, 1] }}
+											transition={{ duration: 0.5, type: 'spring' }}
+											data-tip
+											data-for={experience.id}
+											key={workExperienceFiltered.id}
+										>
+											<Typography
+												variant="h3"
+												component="span"
+												fontWeight={600}
 											>
-												<Typography
-													variant="h3"
-													component="span"
-													fontWeight={600}
-												>
-													{isEnglishSelected
-														? workExperienceFiltered.ocupation
-														: workExperienceFiltered.ocupacion}
-												</Typography>
-												<Typography
-													variant="body1"
-													component="span"
-													marginTop={1.5}
-												>
-													{isEnglishSelected
-														? workExperienceFiltered.companyEsp
-														: workExperienceFiltered.company}
-												</Typography>
-											</ExperienceContainer>
-										))}
+												{isEnglishSelected
+													? workExperienceFiltered.ocupation
+													: workExperienceFiltered.ocupacion}
+											</Typography>
+											<Typography
+												variant="body1"
+												component="span"
+												marginTop={1.5}
+											>
+												{isEnglishSelected
+													? workExperienceFiltered.companyEsp
+													: workExperienceFiltered.company}
+											</Typography>
+										</ExperienceContainer>
+									))}
 								</Fragment>
 							</TimelineContent>
 						</TimelineItem>

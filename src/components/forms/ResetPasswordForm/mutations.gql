@@ -1,4 +1,0 @@
-
-mutation RESET_USER_PASSWORD($token: String!, $password: String!) {
-  resetUserAccountPassword(token: $token, password: $password)
-}

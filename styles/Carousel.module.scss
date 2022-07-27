@@ -31,6 +31,12 @@
 	transition-delay: 0.75s;
 }
 
+.slider li:checked + .imgBx {
+	z-index: 10;
+	clip-path: circle(1200px at center);
+	transition-delay: 0.75s;
+}
+
 .slider .imgBx img {
 	position: absolute;
 	top: 0;

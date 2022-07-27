@@ -10,12 +10,12 @@ import Avatar from '@mui/material/Avatar'
 import styled from '@mui/system/styled'
 import ImageSlider from '../../components/others/Slider/ImageSlider'
 
-const PortfolioWorkPage = ({ selectedWork }) => {
+const PortfolioWorkBooksPage = ({ selectedWork }) => {
 	const isEnglishSelected = useSelector(state => state.language.isEnglish)
 	const [fetchedWork, setFetchedWorkWork] = useState(selectedWork)
 
 	return (
-		<Page pageTitle="Selected Work Page" backgroundColorPage="#4A4E65">
+		<Page pageTitle="Selected Book Page" backgroundColorPage="#4A4E65">
 			<Fragment>
 				<Box
 					display="flex"
@@ -87,21 +87,13 @@ const PortfolioWorkPage = ({ selectedWork }) => {
 	)
 }
 
-export default PortfolioWorkPage
+export default PortfolioWorkBooksPage
 
-export async function getStaticProps(context) {
-	const workId = context.params.workId
+export async function getStaticProps() {
 	return {
 		props: {
-			selectedWork: works.find(work => work.id === workId),
+			selectedWork: works.find(work => work.title === 'Books'),
 		}, // will be passed to the page component as props
-	}
-}
-
-export async function getStaticPaths() {
-	return {
-		paths: works.map(work => ({ params: { workId: work.id.toString() } })),
-		fallback: true, // false or 'blocking'
 	}
 }
 

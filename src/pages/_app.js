@@ -6,6 +6,7 @@ import { theme } from '../theme'
 import CssBaseline from '@mui/material/CssBaseline'
 import store from '../store/index'
 import PropTypes from 'prop-types'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import UserLayout from '../components/others/UserLayout'
 

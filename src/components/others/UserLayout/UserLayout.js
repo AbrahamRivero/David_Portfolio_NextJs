@@ -1,13 +1,12 @@
 import Box from '@mui/material/Box'
 import PropTypes from 'prop-types'
-import Navbar from './components/Navbar/Navbar'
+import AppBar from './components/Navbar/Navbar'
 
 const UserLayout = ({ children, ...props }) => {
 	return (
 		<Box>
-			<Navbar />
+			<AppBar />
 			{children}
-			
 		</Box>
 	)
 }

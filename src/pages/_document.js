@@ -1,21 +1,22 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 
 class CustomDocument extends Document {
 	render() {
 		return (
-			<Html lang="en-US">
+			<Html lang="en">
 				<Head title="David Portfolio">
 					<link rel="icon" href="/logo.svg" />
-					<link rel="preconnect" href="https://fonts.googleapis.com"></link>
-					<link
-						rel="preconnect"
-						href="https://fonts.gstatic.com"
+					<Script src="https://fonts.googleapis.com" strategy="lazyOnload" />
+					<Script
+						src="https://fonts.gstatic.com"
+						strategy="lazyOnload"
 						crossOrigin="true"
-					></link>
-					<link
-						href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap"
-						rel="stylesheet"
-					></link>
+					/>
+					<Script
+						src="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap"
+						strategy="lazyOnload"
+					/>
 				</Head>
 				<body>
 					<Main />

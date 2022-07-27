@@ -27,9 +27,9 @@ export const navigationDrawerLinks = [
 
 export const navigationDrawerRefs = [
 	{
-		linkName: 'Skills',
-		linkNameEsp: 'Habilidades',
-		linkUrl: '#skills',
+		linkName: 'Technologies',
+		linkNameEsp: 'Tecnologías',
+		linkUrl: '#technologies',
 		icon: <BoltIcon />,
 	},
 	{
