@@ -6,7 +6,7 @@ export const technologies = [
 	},
 	{
 		title: 'Figma',
-		icon: '/public/assets/figma.png',
+		icon: '/assets/figma.png',
 		id: 1,
 	},
 	{
